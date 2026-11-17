@@ -1,0 +1,60 @@
+[v90 emission] sim load: 773 wells (sim_boot_v90.pkl)
+[v90 SDF] pred load: 773 wells (train OOF)
+PF parameter sets:
+  pf_1: suffix=_1, N=700, seeds=32, jump=(0.002, 5.0)
+  pf_2: suffix=_2, N=600, seeds=32, jump=(0.002, 5.0)
+  pf_3: suffix=_3, N=800, seeds=32, jump=(0.002, 5.0)
+  pf_4: suffix=_4, N=800, seeds=32, jump=(0.0, 20.0)
+  pf_5: suffix=_5, N=700, seeds=32, jump=(0.0, 10.0)
+[v28] device=cuda smooth_lag=16 n_seed=32 PF=r0 self/nbr/z_grad追加 chunk=120
+[v28] PF: p_1->pf_1, p_2->pf_2, p_3->pf_3, p_4->pf_4, p_5->pf_5
+[train] 使用坑井: 3  PF=['p_1', 'p_2', 'p_3', 'p_4', 'p_5'](smooth, tw/self/nbr各5回=計15回)  lag=16  n_seed=32
+[smoothPF-tw] p_1 ...
+      done 13.6s
+[smoothPF-tw] p_2 ...
+      done 13.4s
+[smoothPF-tw] p_3 ...
+      done 13.2s
+[smoothPF-tw] p_4 ...
+      done 13.5s
+[smoothPF-tw] p_5 ...
+      done 12.5s
+[smoothPF-self] p_1 ...
+      done 13.5s
+[smoothPF-self] p_2 ...
+      done 13.5s
+[smoothPF-self] p_3 ...
+      done 13.6s
+[smoothPF-self] p_4 ...
+      done 13.2s
+[smoothPF-self] p_5 ...
+      done 13.1s
+[smoothPF-nbr] 近傍探索 ...
+      近傍あり 0/3(残りは通常実行=tw)
+[smoothPF-nbr] p_1 ...
+      done 14.3s
+[smoothPF-nbr] p_2 ...
+      done 13.7s
+[smoothPF-nbr] p_3 ...
+      done 13.5s
+[smoothPF-nbr] p_4 ...
+      done 12.8s
+[smoothPF-nbr] p_5 ...
+      done 12.6s
+[smoothPF-corr] p_1 W=0.01 done 52.4s
+[smoothPF-corr] p_2 W=0.01 done 53.8s
+[smoothPF-corr] p_3 W=0.005 done 54.0s
+[smoothPF-corr] p_4 W=0.005 done 53.2s
+[smoothPF-corr] p_5 W=0.005 done 50.9s
+[v41] PFパスをキャッシュ保存: pfpass_cache_v69.npz
+[build] v9 build_well(smooth PF注入) + self/nbr/z_grad 列 ...
+[Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.
+[Parallel(n_jobs=4)]: Done   3 out of   3 | elapsed:    9.7s finished
+      done 9.8s  parts=3
+\nsaved: C:\Users\kosaka256\Documents\rogii_claude\v90\data\smoke.parquet  rows=14151 cols=716
+  pf_* = 335 列
+  beam* = 40 列
+  tvtF* = 18 列
+  form* = 3 列
+  dense* = 6 列
+  sc* = 25 列

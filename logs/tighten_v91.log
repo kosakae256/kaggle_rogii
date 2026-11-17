@@ -1,0 +1,7 @@
+[候補空間を狭める掃引 155井]  基準=DIPSP20 DEV25 CURV=inf
+  N=5000 DIPSP=20 DEV=25 CURV=99: oracle=3.95 GRmse=20.46 r0snap=7.95 r0+UNet=7.50 (候補中央4853)
+  N=5000 DIPSP=10 DEV=25 CURV=99: oracle=4.26 GRmse=20.89 r0snap=8.28 r0+UNet=7.58 (候補中央4932)
+  N=5000 DIPSP=10 DEV=12 CURV=99: oracle=9.08 GRmse=25.22 r0snap=11.39 r0+UNet=11.32 (候補中央5000)
+  N=5000 DIPSP=5 DEV=8 CURV=99: oracle=15.93 GRmse=29.57 r0snap=17.16 r0+UNet=17.05 (候補中央5000)
+  N=5000 DIPSP=10 DEV=25 CURV=1.5: oracle=49.39 GRmse=54.57 r0snap=49.53 r0+UNet=49.52 (候補中央3)
+  N=5000 DIPSP=10 DEV=25 CURV=0.7: oracle=58.20 GRmse=58.54 r0snap=58.29 r0+UNet=58.29 (候補中央1)

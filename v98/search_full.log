@@ -1,0 +1,2 @@
+[v93 pf_banks] 錨=grfree_anchor_train.pkl 773井 / banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'] / smooth_lag=192
+[search] train井=773  banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA']  lag=192 n_seed=32 chunk=20 seed=562571912  候補=[(0.0, 1.0), (5.0, 1.0), (5.0, 0.9)]

@@ -1,0 +1,66 @@
+[v93 pf_banks] 錨=grfree_anchor_train.pkl 773井 / banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'] / smooth_lag=16
+device=cuda  PF=r0_seed32 (use_phys=False, use_anchor=False, N=400)  n_seed=32  N_BWD=128  TRANS_INFLATE=32.0
+usable wells: 40 / requested 40
+
+[lag192] v93 fixed-lag smoother (smooth_lag=192) ...
+[lag192] overall RMSE = 7.4905  (48s)
+
+[FFBSm] forward filter + real backward marginal smoother (per well) ...
+[1/40] 000d7d20 T=3836 | run fwd=7.106 ffbs=6.930 | 8s ETA 5.5m
+[2/40] 00bbac68 T=6014 | run fwd=6.033 ffbs=5.280 | 22s ETA 6.8m
+[3/40] 00e12e8b T=4301 | run fwd=7.523 ffbs=7.161 | 31s ETA 6.4m
+[4/40] 015fe0d2 T=4296 | run fwd=6.933 ffbs=6.520 | 41s ETA 6.1m
+[5/40] 01869cd4 T=5557 | run fwd=9.588 ffbs=8.906 | 53s ETA 6.2m
+[6/40] 01982c1d T=3941 | run fwd=9.082 ffbs=8.313 | 62s ETA 5.8m
+[7/40] 028d7b28 T=6234 | run fwd=9.719 ffbs=9.116 | 75s ETA 5.9m
+[8/40] 02e7fe5a T=5108 | run fwd=9.225 ffbs=8.594 | 86s ETA 5.8m
+[9/40] 0390d174 T=4411 | run fwd=8.786 ffbs=8.165 | 96s ETA 5.5m
+[10/40] 03a935ae T=2786 | run fwd=9.150 ffbs=8.549 | 103s ETA 5.1m
+[11/40] 044af7d1 T=4519 | run fwd=8.748 ffbs=8.168 | 113s ETA 5.0m
+[12/40] 0498acab T=4798 | run fwd=8.387 ffbs=7.825 | 124s ETA 4.8m
+[13/40] 052d64df T=2445 | run fwd=8.229 ffbs=7.689 | 129s ETA 4.5m
+[14/40] 05948241 T=3879 | run fwd=7.974 ffbs=7.448 | 138s ETA 4.3m
+[15/40] 059c8f24 T=6258 | run fwd=7.972 ffbs=7.311 | 152s ETA 4.2m
+[16/40] 05a0ee4d T=4348 | run fwd=7.926 ffbs=7.249 | 161s ETA 4.0m
+[17/40] 060ab2b8 T=6258 | run fwd=7.632 ffbs=6.990 | 175s ETA 3.9m
+[18/40] 06df5958 T=3509 | run fwd=7.534 ffbs=6.929 | 183s ETA 3.7m
+[19/40] 071d7b45 T=3211 | run fwd=7.402 ffbs=6.801 | 190s ETA 3.5m
+[20/40] 0849b4e2 T=5537 | run fwd=7.354 ffbs=6.617 | 202s ETA 3.4m
+[21/40] 084d66f9 T=3885 | run fwd=7.246 ffbs=6.517 | 211s ETA 3.2m
+[22/40] 08fecf00 T=5574 | run fwd=7.295 ffbs=6.555 | 223s ETA 3.0m
+[23/40] 09053135 T=5907 | run fwd=7.531 ffbs=6.953 | 236s ETA 2.9m
+[24/40] 09441b8d T=5488 | run fwd=7.353 ffbs=6.787 | 248s ETA 2.8m
+[25/40] 0955cd6c T=5195 | run fwd=7.249 ffbs=6.680 | 260s ETA 2.6m
+[26/40] 09ec2ca9 T=5885 | run fwd=7.372 ffbs=6.802 | 272s ETA 2.4m
+[27/40] 0a57a29c T=5821 | run fwd=7.254 ffbs=6.677 | 285s ETA 2.3m
+[28/40] 0bbf5e67 T=4298 | run fwd=7.146 ffbs=6.580 | 295s ETA 2.1m
+[29/40] 0be01c24 T=4738 | run fwd=7.042 ffbs=6.473 | 305s ETA 1.9m
+[30/40] 0c1b160c T=5054 | run fwd=7.030 ffbs=6.440 | 317s ETA 1.8m
+[31/40] 0d99f8e4 T=5823 | run fwd=6.899 ffbs=6.332 | 329s ETA 1.6m
+[32/40] 0dc5e64d T=4879 | run fwd=6.926 ffbs=6.259 | 340s ETA 1.4m
+[33/40] 0dc835f3 T=4428 | run fwd=6.854 ffbs=6.214 | 350s ETA 1.2m
+[34/40] 0dd99dc5 T=7342 | run fwd=6.768 ffbs=6.135 | 366s ETA 1.1m
+[35/40] 0e5e560d T=3253 | run fwd=6.737 ffbs=6.104 | 374s ETA 0.9m
+[36/40] 109d9d70 T=4215 | run fwd=6.767 ffbs=6.111 | 383s ETA 0.7m
+[37/40] 10a1281a T=5609 | run fwd=6.819 ffbs=6.177 | 395s ETA 0.5m
+[38/40] 10b89021 T=5414 | run fwd=6.723 ffbs=6.089 | 407s ETA 0.4m
+[39/40] 10be2420 T=3271 | run fwd=6.669 ffbs=6.041 | 414s ETA 0.2m
+[40/40] 113011eb T=3272 | run fwd=7.598 ffbs=6.956 | 422s ETA 0.0m
+
+============================================================
+RESULT  (r0_seed32, 40 wells minus skipped, n_seed=32, N_BWD=128, TRANS_INFLATE=32.0)
+============================================================
+  forward (blend=0)        = 7.5984
+  lag192 (fixed-lag proxy) = 7.4905   (dvs fwd -0.1079)
+  FFBSm-full (clamp=None)  = 6.9563   (dvs fwd -0.6421)
+  anchor-FFBSm band=+/-   5ft = 7.4346   (dvs fwd -0.1639)
+  anchor-FFBSm band=+/-  10ft = 7.1130   (dvs fwd -0.4854)
+  anchor-FFBSm band=+/-  20ft = 6.9563   (dvs fwd -0.6421)
+  anchor-FFBSm band=+/-  40ft = 6.9563   (dvs fwd -0.6421)
+============================================================
+  FFBSm-full beats forward? YES
+  FFBSm-full beats lag192?  YES
+  gain (fwd - ffbs)  = +0.6421
+  band=+/-40 retains 100% of the gain (>~80% => local, not datum-flip)
+  peak GPU mem = 2.23 GB
+  skipped wells: none

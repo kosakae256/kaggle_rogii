@@ -1,0 +1,21 @@
+########## SYSTEM=normal ##########
+  pf_* = 310 列
+
+==== combo 結合 ====
+[combo] train_combo.parquet 完成 行=27945 列=1274
+
+[create_v98] SYSTEM=normal 完了 -> C:\Users\kosaka256\Documents\rogii_claude\v98\artifacts_v98\data\train_combo.parquet
+########## SYSTEM=bwd ##########
+  pf_* = 310 列
+
+==== combo 結合 ====
+[combo] train_aug_bwd_combo.parquet 完成 行=18282 列=1274
+
+[create_v98] SYSTEM=bwd 完了 -> C:\Users\kosaka256\Documents\rogii_claude\v98\artifacts_v98\data\train_aug_bwd_combo.parquet
+########## SYSTEM=fwd ##########
+  pf_* = 310 列
+
+==== combo 結合 ====
+[combo] train_aug_fwd_combo.parquet 完成 行=13974 列=1274
+
+[create_v98] SYSTEM=fwd 完了 -> C:\Users\kosaka256\Documents\rogii_claude\v98\artifacts_v98\data\train_aug_fwd_combo.parquet

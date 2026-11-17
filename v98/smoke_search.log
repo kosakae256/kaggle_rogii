@@ -1,0 +1,27 @@
+[v93 pf_banks] 錨=grfree_anchor_train.pkl 773井 / banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'] / smooth_lag=192
+[search] train井=6  banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA']  lag=192 n_seed=8 chunk=20 seed=99175023  候補=[(0.0, 1.0), (5.0, 1.0)]
+  pf_1         ν=0    β=1     RMSE=9.2219  (10s)
+  pf_1         ν=5    β=1     RMSE=8.3161  (9s)
+  => pf_1: 最良 ν=5.0 β=1.0 RMSE=8.3161 (base 9.2219, −0.9058)
+
+  pf_2         ν=0    β=1     RMSE=8.9562  (9s)
+  pf_2         ν=5    β=1     RMSE=5.0350  (10s)
+  => pf_2: 最良 ν=5.0 β=1.0 RMSE=5.0350 (base 8.9562, −3.9212)
+
+  pf_3         ν=0    β=1     RMSE=9.6209  (10s)
+  pf_3         ν=5    β=1     RMSE=9.7828  (9s)
+  => pf_3: 最良 ν=0.0 β=1.0 RMSE=9.6209 (base 9.6209, −0.0000)
+
+  r0_seed32    ν=0    β=1     RMSE=10.5619  (9s)
+  r0_seed32    ν=5    β=1     RMSE=8.8010  (9s)
+  => r0_seed32: 最良 ν=5.0 β=1.0 RMSE=8.8010 (base 10.5619, −1.7609)
+
+  r1_seed32    ν=0    β=1     RMSE=12.3033  (11s)
+  r1_seed32    ν=5    β=1     RMSE=15.8971  (10s)
+  => r1_seed32: 最良 ν=0.0 β=1.0 RMSE=12.3033 (base 12.3033, −0.0000)
+
+  pfA          ν=0    β=1     RMSE=8.5260  (10s)
+  pfA          ν=5    β=1     RMSE=8.5309  (9s)
+  => pfA: 最良 ν=0.0 β=1.0 RMSE=8.5260 (base 8.5260, −0.0000)
+
+[search] 完了 (115s)

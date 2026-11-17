@@ -1,0 +1,87 @@
+[v70] 複数PF付き 773/773  (9バンク median基準, PF入力=on)
+[v70 iTr] wells 773 CV=field STRUCT=1(center=s_tvt) V=36 δ=91bin d=64 device=cuda
+[cv] leave-field-out 16fields→5fold
+  fold 0: train 623 / val 150
+    ep1/15 mse=56.908(rmse~7.544) 8s
+    ep2/15 mse=53.137(rmse~7.290) 8s
+    ep3/15 mse=54.115(rmse~7.356) 8s
+    ep4/15 mse=50.005(rmse~7.071) 8s
+    ep5/15 mse=50.428(rmse~7.101) 8s
+    ep6/15 mse=49.493(rmse~7.035) 8s
+    ep7/15 mse=49.503(rmse~7.036) 8s
+    ep8/15 mse=48.448(rmse~6.960) 8s
+    ep9/15 mse=49.164(rmse~7.012) 8s
+    ep10/15 mse=47.165(rmse~6.868) 8s
+    ep11/15 mse=48.896(rmse~6.993) 8s
+    ep12/15 mse=49.684(rmse~7.049) 8s
+    ep13/15 mse=47.775(rmse~6.912) 8s
+    ep14/15 mse=47.485(rmse~6.891) 8s
+    ep15/15 mse=45.129(rmse~6.718) 8s
+  fold 1: train 618 / val 155
+    ep1/15 mse=55.372(rmse~7.441) 8s
+    ep2/15 mse=54.781(rmse~7.401) 8s
+    ep3/15 mse=56.047(rmse~7.486) 8s
+    ep4/15 mse=52.617(rmse~7.254) 8s
+    ep5/15 mse=53.101(rmse~7.287) 8s
+    ep6/15 mse=53.038(rmse~7.283) 8s
+    ep7/15 mse=52.575(rmse~7.251) 8s
+    ep8/15 mse=53.160(rmse~7.291) 8s
+    ep9/15 mse=52.092(rmse~7.217) 8s
+    ep10/15 mse=52.006(rmse~7.212) 8s
+    ep11/15 mse=52.205(rmse~7.225) 8s
+    ep12/15 mse=52.351(rmse~7.235) 8s
+    ep13/15 mse=52.268(rmse~7.230) 8s
+    ep14/15 mse=51.987(rmse~7.210) 8s
+    ep15/15 mse=52.610(rmse~7.253) 8s
+  fold 2: train 620 / val 153
+    ep1/15 mse=56.230(rmse~7.499) 8s
+    ep2/15 mse=49.348(rmse~7.025) 8s
+    ep3/15 mse=48.114(rmse~6.936) 8s
+    ep4/15 mse=46.622(rmse~6.828) 8s
+    ep5/15 mse=48.743(rmse~6.982) 8s
+    ep6/15 mse=48.658(rmse~6.975) 8s
+    ep7/15 mse=53.677(rmse~7.326) 8s
+    ep8/15 mse=47.321(rmse~6.879) 8s
+    ep9/15 mse=48.185(rmse~6.942) 8s
+    ep10/15 mse=45.584(rmse~6.752) 8s
+    ep11/15 mse=45.795(rmse~6.767) 8s
+    ep12/15 mse=45.222(rmse~6.725) 8s
+    ep13/15 mse=44.345(rmse~6.659) 8s
+    ep14/15 mse=45.261(rmse~6.728) 8s
+    ep15/15 mse=44.629(rmse~6.681) 8s
+  fold 3: train 615 / val 158
+    ep1/15 mse=59.910(rmse~7.740) 8s
+    ep2/15 mse=56.358(rmse~7.507) 8s
+    ep3/15 mse=56.522(rmse~7.518) 8s
+    ep4/15 mse=54.582(rmse~7.388) 8s
+    ep5/15 mse=51.286(rmse~7.161) 8s
+    ep6/15 mse=50.370(rmse~7.097) 8s
+    ep7/15 mse=49.460(rmse~7.033) 8s
+    ep8/15 mse=51.218(rmse~7.157) 8s
+    ep9/15 mse=49.379(rmse~7.027) 8s
+    ep10/15 mse=48.549(rmse~6.968) 8s
+    ep11/15 mse=48.303(rmse~6.950) 8s
+    ep12/15 mse=48.971(rmse~6.998) 8s
+    ep13/15 mse=47.440(rmse~6.888) 8s
+    ep14/15 mse=49.577(rmse~7.041) 8s
+    ep15/15 mse=47.864(rmse~6.918) 8s
+  fold 4: train 616 / val 157
+    ep1/15 mse=52.260(rmse~7.229) 8s
+    ep2/15 mse=51.420(rmse~7.171) 8s
+    ep3/15 mse=50.127(rmse~7.080) 8s
+    ep4/15 mse=50.498(rmse~7.106) 8s
+    ep5/15 mse=50.672(rmse~7.118) 8s
+    ep6/15 mse=50.924(rmse~7.136) 8s
+    ep7/15 mse=49.627(rmse~7.045) 8s
+    ep8/15 mse=49.370(rmse~7.026) 8s
+    ep9/15 mse=49.614(rmse~7.044) 8s
+    ep10/15 mse=50.474(rmse~7.105) 8s
+    ep11/15 mse=50.338(rmse~7.095) 8s
+    ep12/15 mse=49.553(rmse~7.039) 8s
+    ep13/15 mse=49.627(rmse~7.045) 8s
+    ep14/15 mse=49.376(rmse~7.027) 8s
+    ep15/15 mse=49.626(rmse~7.045) 8s
+
+[v70 iTr] field_st  overall RMSE = 7.3470  (struct錨基準 9.7012)
+          坑井別中央 4.0245  (773坑井, 590s)
+[saved] itr_oof_field_st.npy / results_field_st.json

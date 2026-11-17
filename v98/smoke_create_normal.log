@@ -1,0 +1,3 @@
+[create_v98] SYSTEM=normal chunk=20 NWELLS=6 FOLD_ART=grfree_fold_art.pkl
+
+==== normal v96create: create_v95.py ====

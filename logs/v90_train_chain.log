@@ -1,0 +1,27 @@
+=== wait parquet 05:31:55 ===
+=== TABULAR 06:51:23 ===
+Traceback (most recent call last):
+  File "C:\Users\kosaka256\Documents\rogii_claude\v90\_run_nb.py", line 11, in <module>
+    exec(compile(src, nb, "exec"), g)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "v90/train_tabular_v90.ipynb", line 34, in <module>
+    "import pyarrow.parquet as pq\n",
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\pyarrow\parquet\core.py", line 2459, in read_schema
+    file = ParquetFile(
+        where, memory_map=memory_map,
+        decryption_properties=decryption_properties)
+  File "C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\pyarrow\parquet\core.py", line 328, in __init__
+    self.reader.open(
+    ~~~~~~~~~~~~~~~~^
+        source, use_memory_map=memory_map,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        arrow_extensions_enabled=arrow_extensions_enabled,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "pyarrow/_parquet.pyx", line 1656, in pyarrow._parquet.ParquetReader.open
+  File "pyarrow/error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.
+TABULAR FAILED

@@ -1,0 +1,41 @@
+wells=773 K=71 V93_INPUT=combo SF=seqfeat_combo_cf.pkl ARCH=l5b SMOKE=False SEEDS=[0] (0s)
+folds built: N=3783989 wells_used=773 (fold sizes: [155, 155, 154, 155, 154])
+seed0 fold0 [train] trn=618 val=155
+  s0 ep1 train=27.562 val=38.838 *best (bad=0, 2s)
+  s0 ep2 train=25.928 val=37.682 *best (bad=0, 4s)
+  s0 ep3 train=24.180 val=38.614 (bad=1, 5s)
+  s0 ep4 train=22.528 val=39.907 (bad=2, 7s)
+  s0 ep5 train=25.560 val=35.711 *best (bad=0, 8s)
+  s0 ep6 train=23.533 val=36.165 (bad=1, 10s)
+  s0 ep7 train=23.853 val=36.193 (bad=2, 11s)
+  s0 ep8 train=22.714 val=36.799 (bad=3, 12s)
+  s0 ep9 train=23.136 val=36.555 (bad=4, 14s)
+  s0 ep10 train=21.242 val=34.977 *best (bad=0, 15s)
+  s0 ep11 train=21.007 val=36.173 (bad=1, 17s)
+  s0 ep12 train=21.781 val=33.297 *best (bad=0, 18s)
+  s0 ep13 train=23.698 val=36.794 (bad=1, 19s)
+  s0 ep14 train=22.252 val=34.443 (bad=2, 21s)
+  s0 ep15 train=22.267 val=34.055 (bad=3, 22s)
+  s0 ep16 train=20.222 val=34.128 (bad=4, 24s)
+  s0 ep17 train=19.962 val=33.699 (bad=5, 25s)
+  s0 ep18 train=20.411 val=32.556 *best (bad=0, 27s)
+  s0 ep19 train=19.806 val=32.085 *best (bad=0, 28s)
+  s0 ep20 train=20.848 val=33.130 (bad=1, 29s)
+  s0 ep21 train=19.214 val=32.467 (bad=2, 31s)
+  s0 ep22 train=20.712 val=32.678 (bad=3, 32s)
+  s0 ep23 train=18.687 val=32.356 (bad=4, 34s)
+  s0 ep24 train=19.525 val=32.178 (bad=5, 35s)
+  s0 ep25 train=18.914 val=32.945 (bad=6, 37s)
+  s0 ep26 train=19.344 val=33.306 (bad=7, 38s)
+  s0 ep27 train=26.382 val=33.078 (bad=8, 39s)
+  s0 ep28 train=18.976 val=32.978 (bad=9, 41s)
+  s0 ep29 train=18.750 val=33.881 (bad=10, 42s)
+  s0 ep30 train=17.895 val=32.736 (bad=11, 44s)
+  s0 ep31 train=17.701 val=32.790 (bad=12, 45s)
+  s0 stop @ep31 best=32.085
+== seed0 OOF per-row(target) RMSE = 5.6698  (filled 757738/3783989)
+
+=== v93 L5B (struct-free segment-level leg) ===
+  seed0 OOF RMSE = 14.6065
+  1-seed ensemble OOF RMSE = 14.6065
+  saved v100\artifacts_v100\l5b_oof.npz  keys=['l5b_s0', 'l5b_mean', 'y']

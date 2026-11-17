@@ -1,0 +1,18 @@
+=== wait+verify parquet 07:45:58 ===
+=== parquet OK, TABULAR 07:45:59 ===
+origin別 全特徴数: {'base': 337, 'beam': 40, 'pf': 261, 'self': 38, 'nbr': 36, 'zgrad': 1}
+採用 713 列
+★v48 gf特徴 3列(memmapに同梱)
+Traceback (most recent call last):
+  File "C:\Users\kosaka256\Documents\rogii_claude\v90\_run_nb.py", line 11, in <module>
+    exec(compile(src, nb, "exec"), g)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "v90/train_tabular_v90.ipynb", line 61, in <module>
+    "\n",
+  File "C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\numpy\_core\memmap.py", line 236, in __new__
+    f_ctx = open(
+        os.fspath(filename),
+        ('r' if mode == 'c' else mode) + 'b'
+    )
+OSError: [Errno 22] Invalid argument: 'C:\\Users\\kosaka256\\Documents\\rogii_claude\\v90\\artifacts_v90\\data\\_X_tab_v90.mmap'
+TABULAR FAILED

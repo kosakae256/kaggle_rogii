@@ -1,0 +1,6 @@
+=== L5 vs L5X A/B (fold0, seed0, v99 combo 10バンク) 13:10:13 ===
+--- ARCH=l5 ---
+wells=773 K=46 V93_INPUT=combo SF=seqfeat_combo_cf.pkl ARCH=l5 SMOKE=False SEEDS=[0] (0s)
+--- ARCH=l5x ---
+wells=773 K=46 V93_INPUT=combo SF=seqfeat_combo_cf.pkl ARCH=l5x SMOKE=False SEEDS=[0] (0s)
+=== A/B 完了 13:11:51 ===

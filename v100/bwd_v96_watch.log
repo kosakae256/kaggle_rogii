@@ -1,0 +1,35 @@
+>>> v96å®Œäº† 08:23:00
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import pandas as pd;d=pd.read_parquet("v100/artifacts_v100/bpf_v96.parquet");print("shape",d.shape,"ˆä",d["well"].nunique(),"bpf",sum(1 for c in d.columns if c.startswith("bpf_")))
+                          ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\pandas\io\parquet.py", line 671, in read_parquet
+    return impl.read(
+           ~~~~~~~~~^
+        path,
+        ^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\pandas\io\parquet.py", line 260, in read
+    pa_table = self.api.parquet.read_table(
+        path_or_handle,
+    ...<3 lines>...
+        **kwargs,
+    )
+  File "C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\pyarrow\parquet\core.py", line 1891, in read_table
+    dataset = ParquetDataset(
+        source,
+    ...<16 lines>...
+        arrow_extensions_enabled=arrow_extensions_enabled,
+    )
+  File "C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\pyarrow\parquet\core.py", line 1460, in __init__
+    [fragment], schema=schema or fragment.physical_schema,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/_dataset.pyx", line 1477, in pyarrow._dataset.Fragment.physical_schema.__get__
+  File "pyarrow/error.pxi", line 155, in pyarrow.lib.pyarrow_internal_check_status
+  File "pyarrow/error.pxi", line 92, in pyarrow.lib.check_status
+    raise convert_status(status)
+pyarrow.lib.ArrowInvalid: Could not open Parquet input source '<Buffer>': Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.

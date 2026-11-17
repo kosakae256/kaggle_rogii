@@ -1,0 +1,127 @@
+
+==== [1/3] GRフリー test 錨 ====
+[skip] grfree_anchor_test.pkl 既存(FORCE_ANCHOR=1 で再生成)
+
+==== [2/3] test NN-emission sim ====
+[NN-emission] split=test wells=3 錨=grfree_anchor_test.pkl(3井) encoder=全5平均 -> sim_grfree_test_v93.pkl
+sim saved: 3/3 wells -> sim_grfree_test_v93.pkl
+
+==== [3/3] create test.parquet ====
+[Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.
+[Parallel(n_jobs=4)]: Done   3 out of   3 | elapsed:    8.3s finished
+[v93 pf_banks] 錨=grfree_anchor_test.pkl 3井 / banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'] / smooth_lag=16
+[v93] device=cuda smooth_lag=16 n_seed=32 chunk=60 NWELLS=None
+[test] 使用坑井: 3  banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'](tw/self/nbr 各6回=計18回)  lag=16  n_seed=32
+[v93 NN-emission] sim load: 3 wells (対象 miss 0)
+[imputers] FI=765井 / DI点=45960
+[smoothPF-nbr] 近傍探索 ...
+      近傍あり 3/3(残りは通常実行=tw)
+[smoothPF-tw] pf_1 ...
+      done 11.6s
+[smoothPF-self] pf_1 ...
+      done 11.2s
+[smoothPF-nbr] pf_1 ...
+      done 11.1s
+[smoothPF-tw] pf_2 ...
+      done 11.0s
+[smoothPF-self] pf_2 ...
+      done 11.0s
+[smoothPF-nbr] pf_2 ...
+      done 10.9s
+[smoothPF-tw] pf_3 ...
+      done 11.1s
+[smoothPF-self] pf_3 ...
+      done 14.1s
+[smoothPF-nbr] pf_3 ...
+      done 14.9s
+[smoothPF-tw] r0_seed32 ...
+      done 15.4s
+[smoothPF-self] r0_seed32 ...
+      done 14.8s
+[smoothPF-nbr] r0_seed32 ...
+      done 14.5s
+[smoothPF-tw] r1_seed32 ...
+      done 15.2s
+[smoothPF-self] r1_seed32 ...
+      done 15.3s
+[smoothPF-nbr] r1_seed32 ...
+      done 14.9s
+[smoothPF-tw] pfA ...
+      done 15.5s
+[smoothPF-self] pfA ...
+      done 15.0s
+[smoothPF-nbr] pfA ...
+      done 15.2s
+[build] build_well(smooth-PF注入) + self/nbr/z_grad 列 ...
+      done 8.4s  parts=3
+
+saved: C:\Users\kosaka256\Documents\rogii_claude\v93\artifacts_v93\data\test.parquet  rows=14151 cols=721 wells=3
+  pf_* = 338 列
+  beam* = 40 列
+  tvtF* = 18 列
+  form* = 3 列
+  dense* = 6 列
+  sc* = 25 列
+[GBM] test rows=14151 feats=719
+   lightgbm-1   pred[mean/min/max]=-2.667/-34.198/15.485
+   lightgbm-2   pred[mean/min/max]=-2.799/-34.813/15.722
+   lightgbm-3   pred[mean/min/max]=-2.721/-34.512/15.829
+   catboost-1   pred[mean/min/max]=-2.718/-35.484/16.975
+   catboost-2   pred[mean/min/max]=-2.583/-35.527/16.900
+   catboost-3   pred[mean/min/max]=-2.528/-35.182/16.635
+   xgboost-1    pred[mean/min/max]=-2.818/-34.616/16.145
+   xgboost-2    pred[mean/min/max]=-2.863/-34.857/15.745
+   xgboost-3    pred[mean/min/max]=-3.125/-35.669/16.308
+[GBM] blend(9) pred[mean/min/max]=-2.758/-34.758/16.133
+
+==== submission [gbm-only] -> submission_v93_gbmonly.csv ====
+rows=14151  sample_rows=14151  match=True  missing(id無)= 0
+tvt finite%=100.00  min=11587.86  max=12239.67  mean=11903.65
+head:
+           id          tvt
+000d7d20_1442 11747.118323
+000d7d20_1443 11747.111565
+000d7d20_1444 11747.101997
+000d7d20_1445 11747.103868
+000d7d20_1446 11747.110393
+000d7d20_1447 11747.108588
+000d7d20_1448 11747.155428
+000d7d20_1449 11747.187070
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\sklearn\utils\validation.py:2827: UserWarning: X does not have valid feature names, but LGBMRegressor was fitted with feature names
+  warnings.warn(
+C:\Users\kosaka256\Documents\rogii_claude\.venv\Lib\site-packages\xgboost\core.py:751: UserWarning: [06:56:09] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\common\error_msg.cc:62: Falling back to prediction using DMatrix due to mismatched devices. This might lead to higher memory usage and slower performance. XGBoost is running on: cuda:0, while the input data is on: cpu.
+Potential solutions:
+- Use a data structure that matches the device ordinal in the booster.
+- Set the device for booster before call to inplace_predict.
+
+This warning will only be shown once.
+
+  return func(**kwargs)

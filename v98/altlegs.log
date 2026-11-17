@@ -1,0 +1,38 @@
+---- smoke gru ----
+[combo] mdn2_s0 fold0 [fit best=12.9974] rmse=12.9974
+== [combo] mdn2_s0 SMOKE fold0-val rmse=12.9974 oof.shape=(190597,) (6s)
+saved nn_oof_combo_SMOKE.npz keys=['mdn2_s0'] shape=(190597,)
+done.
+---- smoke transformer ----
+[combo] mdn2_s0 fold0 [fit best=11.7855] rmse=11.7855
+== [combo] mdn2_s0 SMOKE fold0-val rmse=11.7855 oof.shape=(190597,) (3s)
+saved nn_oof_combo_SMOKE.npz keys=['mdn2_s0'] shape=(190597,)
+done.
+########## ALT-LEG GRU 13:44 ##########
+[v93 L2 TCN] V93_INPUT=combo  入力=train_combo.parquet  feats=features_l1_fcombo.json  rank=feat_rank_nn_fcombo.json
+RUN=combo {'flip': True, 'prefix': True, 'gbmch': False} | device=cuda torch=2.11.0+cu128 | SMOKE=False
+features_l1.json: 1009列 (struct-free) -> NN入力 1008列 (last_known_tvt除外)
+loaded: main=3783989 total=3783989 wells=773 K=1008 (62s)
+絶対TVT->残差化: 96 列
+[v98] fold0 train wells=618(内aug0) val wells=155
+prefix cache load: 773 wells
+rows 3783989 | wells 773 | K 1008 | t_mean/scale 1.596/15.83
+[combo] mdn2_s0 fold0 [fit best=6.2976] rmse=6.2976
+[combo] mdn2_s0 fold1 [fit best=6.5770] rmse=6.5770
+[combo] mdn2_s0 fold2 [fit best=5.8658] rmse=5.8658
+---- blend(after GRU) ----
+[blend比較] y行=3783989 利用可能脚=['TCN', 'L5']
+
+=== 脚別 OOF RMSE(target単位, raw) ===
+  TCN   : 6.0047
+  L5    : 5.8631
+
+=== 誤差相関(低いほど脱相関=blend価値大) ===
+           TCN     L5
+  TCN     1.000  0.881
+  L5      0.881  1.000
+
+=== blend(非負最小二乗) RMSE と増分 ===
+  基準 TCN+L5: 5.7285  w=[0.431 0.602]
+
+※ raw target RMSE。pp(後処理)未適用なので絶対値は combo blend(5.8881)と直接比較不可。増分/相関で判断。

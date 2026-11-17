@@ -1,0 +1,9 @@
+=== emission BETA=0.0 全fold0 23:55:25 ===
+[v90.0] guided PF (BETA=0.0) fold0 overall RMSE = 8.1342  (r0 fold0=8.03 と比較)
+=== emission BETA=0.01 全fold0 23:58:02 ===
+[v90.0] guided PF (BETA=0.01) fold0 overall RMSE = 7.2637  (r0 fold0=8.03 と比較)
+=== emission BETA=0.02 全fold0 00:01:22 ===
+[v90.0] guided PF (BETA=0.02) fold0 overall RMSE = 8.1236  (r0 fold0=8.03 と比較)
+=== emission BETA=0.03 全fold0 00:04:27 ===
+[v90.0] guided PF (BETA=0.03) fold0 overall RMSE = 8.5032  (r0 fold0=8.03 と比較)
+=== done 00:07:29 ===

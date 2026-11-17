@@ -1,0 +1,7 @@
+  150/773
+  300/773
+  450/773
+  600/773
+  750/773
+[RESULT] MODE=pmean: 全773井 overall RMSE = 11.9398
+[RESULT] MODE=argmax: 全773井 overall RMSE = 12.3661

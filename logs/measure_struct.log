@@ -1,0 +1,18 @@
+[v92 GRフリー錨] structgate(K=0.02,SG=6.0) + NN emission(W=0.01)  SP=773井 SIM=773井
+PF parameter sets:
+  pf_1: suffix=_1, N=700, seeds=32, jump=(0.002, 5.0)
+  pf_2: suffix=_2, N=600, seeds=32, jump=(0.002, 5.0)
+  pf_3: suffix=_3, N=800, seeds=32, jump=(0.002, 5.0)
+  pf_4: suffix=_4, N=800, seeds=32, jump=(0.0, 20.0)
+  pf_5: suffix=_5, N=700, seeds=32, jump=(0.0, 10.0)
+測定well=6 NSEED=8 LAG=0(0=非smooth)
+錨なしPF実行...
+GRフリー錨ありPF実行...
+
+[structgate(GRフリー錨) 改善]  pf: 錨なし → 錨あり (Δ)
+  p_1: 8.977 → 8.149  (-0.828)
+  p_2: 9.287 → 8.196  (-1.091)
+  p_3: 9.446 → 8.614  (-0.833)
+  p_4: 9.517 → 4.989  (-4.528)
+  p_5: 10.101 → 4.828  (-5.273)
+  5本平均: 9.466 → 6.955 (-2.511)

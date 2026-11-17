@@ -1,0 +1,113 @@
+origin別: {'base': 337, 'beam': 40, 'pf': 261, 'self': 38, 'nbr': 36, 'zgrad': 1}
+rows 3783989 | features 716 | wells 773 (fold毎ロード=フルX非常駐)
+variants: ['lightgbm-1', 'lightgbm-2', 'lightgbm-3', 'catboost-1', 'catboost-2', 'catboost-3', 'xgboost-1', 'xgboost-2', 'xgboost-3']
+[fold0] X_tr8.7GB X_va2.2GB load(52s)
+  lightgbm-1 fold0 [load]: rmse=6.6070
+Training until validation scores don't improve for 250 rounds
+Early stopping, best iteration is:
+[2189]	valid_0's rmse: 6.63451	valid_0's l2: 44.0168
+  lightgbm-2 fold0 [fit]: rmse=6.6345
+Training until validation scores don't improve for 250 rounds
+Early stopping, best iteration is:
+[2641]	valid_0's rmse: 6.55163	valid_0's l2: 42.9238
+  lightgbm-3 fold0 [fit]: rmse=6.5516
+  catboost-1 fold0 [fit]: rmse=6.6234
+  catboost-2 fold0 [fit]: rmse=6.6846
+  catboost-3 fold0 [fit]: rmse=6.6452
+  xgboost-1 fold0 [fit]: rmse=6.4966
+  xgboost-2 fold0 [fit]: rmse=6.5649
+  xgboost-3 fold0 [fit]: rmse=6.7030
+[fold1] X_tr8.7GB X_va2.2GB load(52s)
+  lightgbm-1 fold1 [load]: rmse=6.9644
+Training until validation scores don't improve for 250 rounds
+Early stopping, best iteration is:
+[1551]	valid_0's rmse: 6.92405	valid_0's l2: 47.9425
+  lightgbm-2 fold1 [fit]: rmse=6.9241
+Training until validation scores don't improve for 250 rounds
+Early stopping, best iteration is:
+[1327]	valid_0's rmse: 6.88026	valid_0's l2: 47.338
+  lightgbm-3 fold1 [fit]: rmse=6.8803
+  catboost-1 fold1 [fit]: rmse=7.1380
+  catboost-2 fold1 [fit]: rmse=7.1730
+  catboost-3 fold1 [fit]: rmse=7.1886
+  xgboost-1 fold1 [fit]: rmse=6.9754
+  xgboost-2 fold1 [fit]: rmse=6.9026
+  xgboost-3 fold1 [fit]: rmse=6.9346
+[fold2] X_tr8.7GB X_va2.2GB load(51s)
+Training until validation scores don't improve for 250 rounds
+Early stopping, best iteration is:
+[1060]	valid_0's rmse: 6.3051	valid_0's l2: 39.7543
+  lightgbm-1 fold2 [fit]: rmse=6.3051
+Training until validation scores don't improve for 250 rounds
+Early stopping, best iteration is:
+[2222]	valid_0's rmse: 6.06084	valid_0's l2: 36.7338
+  lightgbm-2 fold2 [fit]: rmse=6.0608
+Training until validation scores don't improve for 250 rounds
+Early stopping, best iteration is:
+[1434]	valid_0's rmse: 6.10136	valid_0's l2: 37.2266
+  lightgbm-3 fold2 [fit]: rmse=6.1014
+  catboost-1 fold2 [fit]: rmse=6.1475
+  catboost-2 fold2 [fit]: rmse=6.1213
+  catboost-3 fold2 [fit]: rmse=6.2525
+  xgboost-1 fold2 [fit]: rmse=6.2391
+  xgboost-2 fold2 [fit]: rmse=6.2962
+  xgboost-3 fold2 [fit]: rmse=6.2096
+[fold3] X_tr8.7GB X_va2.2GB load(54s)
+Training until validation scores don't improve for 250 rounds
+Early stopping, best iteration is:
+[139]	valid_0's rmse: 6.26855	valid_0's l2: 39.2948
+  lightgbm-1 fold3 [fit]: rmse=6.2686
+Training until validation scores don't improve for 250 rounds
+Early stopping, best iteration is:
+[535]	valid_0's rmse: 6.1932	valid_0's l2: 38.3557
+  lightgbm-2 fold3 [fit]: rmse=6.1932
+Training until validation scores don't improve for 250 rounds
+Early stopping, best iteration is:
+[511]	valid_0's rmse: 6.2227	valid_0's l2: 38.7219
+  lightgbm-3 fold3 [fit]: rmse=6.2227
+  catboost-1 fold3 [fit]: rmse=6.4375
+  catboost-2 fold3 [fit]: rmse=6.4689
+  catboost-3 fold3 [fit]: rmse=6.3972
+  xgboost-1 fold3 [fit]: rmse=6.2522
+  xgboost-2 fold3 [fit]: rmse=6.2164
+  xgboost-3 fold3 [fit]: rmse=6.3512
+[fold4] X_tr8.7GB X_va2.2GB load(52s)
+Training until validation scores don't improve for 250 rounds
+Early stopping, best iteration is:
+[1085]	valid_0's rmse: 7.03836	valid_0's l2: 49.5385
+  lightgbm-1 fold4 [fit]: rmse=7.0384
+Training until validation scores don't improve for 250 rounds
+Early stopping, best iteration is:
+[5630]	valid_0's rmse: 6.88665	valid_0's l2: 47.4259
+  lightgbm-2 fold4 [fit]: rmse=6.8866
+Training until validation scores don't improve for 250 rounds
+Early stopping, best iteration is:
+[4166]	valid_0's rmse: 7.07163	valid_0's l2: 50.0079
+  lightgbm-3 fold4 [fit]: rmse=7.0716
+  catboost-1 fold4 [fit]: rmse=7.1541
+  catboost-2 fold4 [fit]: rmse=7.2143
+  catboost-3 fold4 [fit]: rmse=7.2360
+  xgboost-1 fold4 [fit]: rmse=7.2182
+  xgboost-2 fold4 [fit]: rmse=7.0483
+  xgboost-3 fold4 [fit]: rmse=7.2319
+== lightgbm-1 OOF rmse=6.6444
+== lightgbm-2 OOF rmse=6.5494
+== lightgbm-3 OOF rmse=6.5759
+== catboost-1 OOF rmse=6.7117
+== catboost-2 OOF rmse=6.7453
+== catboost-3 OOF rmse=6.7559
+== xgboost-1 OOF rmse=6.6479
+== xgboost-2 OOF rmse=6.6137
+== xgboost-3 OOF rmse=6.6965
+=== OOF overall RMSE(全行プール=Kaggle指標) ===
+  raw(GBMアンサンブル) : 6.5695
+  + apply_pp           : 6.5736
+  ※ sg は per-well=submitで適用。CV↔LB は ±0.2 床込みで。
+Traceback (most recent call last):
+  File "C:\Users\kosaka256\Documents\rogii_claude\v90\_run_nb.py", line 11, in <module>
+    exec(compile(src, nb, "exec"), g)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "v90/train_tabular_v90.ipynb", line 158, in <module>
+    {
+    
+NameError: name 'ROW_FRAC' is not defined

@@ -1,0 +1,16 @@
+=== wait+verify parquet 07:32:55 ===
+=== parquet OK, TABULAR 07:32:55 ===
+origin別 全特徴数: {'base': 337, 'beam': 40, 'pf': 261, 'self': 38, 'nbr': 36, 'zgrad': 1}
+採用 713 列
+★v48 gf特徴 3列(memmapに同梱)
+rows: fwd 3783989 + bwd 0 = 3783989 | features 716 | wells 773 | X 10.8 GB (memmap, non-resident)
+variants: ['lightgbm-1', 'lightgbm-2', 'lightgbm-3', 'catboost-1', 'catboost-2', 'catboost-3', 'xgboost-1', 'xgboost-2', 'xgboost-3']
+Training until validation scores don't improve for 250 rounds
+Early stopping, best iteration is:
+[690]	valid_0's rmse: 6.60698	valid_0's l2: 43.6522
+lightgbm-1 fold0 [fit]: rmse=6.6070
+Training until validation scores don't improve for 250 rounds
+Early stopping, best iteration is:
+[1127]	valid_0's rmse: 6.96442	valid_0's l2: 48.5031
+lightgbm-1 fold1 [fit]: rmse=6.9644
+TABULAR FAILED

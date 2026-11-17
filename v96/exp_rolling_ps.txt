@@ -1,0 +1,9 @@
+=== v96実験1: Rolling pseudo-PS 基盤検証 ===
+  対象773井(prefix十分). backtest中央682行
+  backtest: 安全外挿RMSE中央=7.67 / GR照合RMSE中央=15.89
+  GRがbacktestで安全外挿に勝つ井: 11%
+  ρ(bt_gr, suffix難度) = +0.020
+  ρ(bt_safe, suffix難度) = +0.063
+  ρ(gr_helps, suffix難度) = +0.064
+  ★ハード井(suf上位20%)を bt_gr で検出 AUC = 0.488  (>0.7なら本番前に井戸別confidence可能)
+  → ρ/AUCが高ければ Rolling pseudo-PS で本番前に井戸別に'GRを信じるか'を決定でき、適応の土台成立。

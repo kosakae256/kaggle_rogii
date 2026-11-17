@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" font-family="Meiryo, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="760" fill="#fbfbfb"/>
+  <text x="640" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">v53 Evidence Fusion Field — 全証拠を (時間 × δ) の場に重ねて単一デコード</text>
+  <text x="640" y="56" text-anchor="middle" font-size="12" fill="#666">δ = struct prior からの偏差(±45ft, 0.5ft格子=181bin) / 時間 = 16行bin。PFは mean/std でなく「粒子質量の場」を渡す</text>
+
+  <!-- ========== 左: 情報源 ========== -->
+  <text x="130" y="92" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">情報源(すべてtest合法)</text>
+  <g font-size="11.5">
+    <rect x="30" y="104" width="200" height="40" rx="6" fill="#e8f0fe" stroke="#4472c4"/>
+    <text x="130" y="121" text-anchor="middle">水平坑 GR / MD / Z</text>
+    <text x="130" y="136" text-anchor="middle">+ typewell GR-TVT</text>
+
+    <rect x="30" y="152" width="200" height="40" rx="6" fill="#e2f0e2" stroke="#2ca02c"/>
+    <text x="130" y="169" text-anchor="middle">struct prior(K16 dip場)</text>
+    <text x="130" y="184" text-anchor="middle">st(t), σ(t) 較正済</text>
+
+    <rect x="30" y="200" width="200" height="40" rx="6" fill="#fdeada" stroke="#ed7d31"/>
+    <text x="130" y="217" text-anchor="middle">自坑井の既知区間(self)</text>
+    <text x="130" y="232" text-anchor="middle">近傍8坑井の既知区間(nbr)</text>
+
+    <rect x="30" y="248" width="200" height="40" rx="6" fill="#ece0f4" stroke="#9467bd"/>
+    <text x="130" y="265" text-anchor="middle">v50 対応点エンコーダ(OOF)</text>
+    <text x="130" y="280" text-anchor="middle">学習類似度 sim(t, δ)</text>
+
+    <rect x="30" y="296" width="200" height="52" rx="6" fill="#fde5e5" stroke="#d62728"/>
+    <text x="130" y="313" text-anchor="middle" font-weight="bold">6×PFバンク(NN-emission)</text>
+    <text x="130" y="327" text-anchor="middle">pf_1/2/3, r0, r1, pfA(錨)</text>
+    <text x="130" y="341" text-anchor="middle">w *= lk_raw × exp(W·sim)</text>
+  </g>
+
+  <!-- ========== 中央: EV23 チャネルスタック ========== -->
+  <text x="520" y="92" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">証拠テンソル EV23(23ch × 時間bin × 181δ)</text>
+
+  <!-- 場のイメージ(重ねた矩形) -->
+  <g>
+    <rect x="392" y="118" width="260" height="72" rx="4" fill="#dbe7f6" stroke="#4472c4"/>
+    <rect x="386" y="112" width="260" height="72" rx="4" fill="#e8f0fe" stroke="#4472c4"/>
+    <rect x="380" y="106" width="260" height="72" rx="4" fill="#f3f7fe" stroke="#4472c4"/>
+    <text x="510" y="136" text-anchor="middle" font-size="12" font-weight="bold" fill="#2a4d8f">ch1-10: v50系 証拠場</text>
+    <text x="510" y="152" text-anchor="middle" font-size="10.5" fill="#333">学習類似度 / 生GR尤度 / prior / δ座標 / σ</text>
+    <text x="510" y="166" text-anchor="middle" font-size="10.5" fill="#333">FB事後γ / self整合+有無 / nbr整合+有無</text>
+  </g>
+  <g>
+    <rect x="392" y="222" width="260" height="96" rx="4" fill="#f8d3d3" stroke="#d62728"/>
+    <rect x="386" y="216" width="260" height="96" rx="4" fill="#fce3e3" stroke="#d62728"/>
+    <rect x="380" y="210" width="260" height="96" rx="4" fill="#fdf0f0" stroke="#d62728"/>
+    <text x="510" y="234" text-anchor="middle" font-size="12" font-weight="bold" fill="#a02020">★ch11-22: PF事後場 12ch(新規)</text>
+    <text x="510" y="252" text-anchor="middle" font-size="10.5" fill="#333">6バンク × {tw, nbr} の行別「粒子質量ヒストグラム」</text>
+    <text x="510" y="267" text-anchor="middle" font-size="10.5" fill="#333">動力学でフィルタ済みの証拠(モメンタム・リサンプ履歴)</text>
+    <text x="510" y="282" text-anchor="middle" font-size="10.5" fill="#333">= どの枝に何割の質量が乗っているかを場のまま渡す</text>
+    <text x="510" y="298" text-anchor="middle" font-size="10" fill="#a02020">16seed平均・forward事後・行正規化</text>
+  </g>
+  <g>
+    <rect x="380" y="330" width="260" height="34" rx="4" fill="#f5edd8" stroke="#bf9000"/>
+    <text x="510" y="351" text-anchor="middle" font-size="11.5" fill="#7f6000">ch23: v50B 学習デコーダの事後 P̄</text>
+  </g>
+
+  <!-- 矢印: 情報源 → EV23 -->
+  <line x1="230" y1="124" x2="378" y2="140" stroke="#555" stroke-width="1.4" marker-end="url(#ar)"/>
+  <line x1="230" y1="172" x2="378" y2="150" stroke="#555" stroke-width="1.4" marker-end="url(#ar)"/>
+  <line x1="230" y1="220" x2="378" y2="162" stroke="#555" stroke-width="1.4" marker-end="url(#ar)"/>
+  <line x1="230" y1="268" x2="378" y2="146" stroke="#555" stroke-width="1.4" marker-end="url(#ar)"/>
+  <line x1="230" y1="322" x2="378" y2="258" stroke="#d62728" stroke-width="2.2" marker-end="url(#ar)"/>
+  <line x1="230" y1="268" x2="378" y2="345" stroke="#9467bd" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+
+  <!-- 増強注記 -->
+  <rect x="380" y="378" width="260" height="46" rx="6" fill="#fff" stroke="#888" stroke-dasharray="5 3"/>
+  <text x="510" y="396" text-anchor="middle" font-size="11" fill="#333">増強: <tspan font-weight="bold">バンクdropout</tspan>(ch11-22を p=0.15で落とす)</text>
+  <text x="510" y="412" text-anchor="middle" font-size="10.5" fill="#666">+ 入力ノイズ0.02 — 混合過学習(StageCの死因)への対抗</text>
+
+  <!-- ========== 右: DecoderC ========== -->
+  <text x="960" y="92" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">DecoderC(v50Bの実証アーキを拡張)</text>
+  <g font-size="11.5">
+    <rect x="800" y="106" width="320" height="34" rx="6" fill="#e8f0fe" stroke="#4472c4"/>
+    <text x="960" y="128" text-anchor="middle">Conv2d 23→128(5×5)</text>
+    <rect x="800" y="150" width="320" height="46" rx="6" fill="#e8f0fe" stroke="#4472c4"/>
+    <text x="960" y="169" text-anchor="middle">時間dilated Convブロック ×5(dil 1,2,4,8,16)</text>
+    <text x="960" y="185" text-anchor="middle" font-size="10.5" fill="#666">δ方向 等方k5 / GroupNorm / residual</text>
+    <rect x="800" y="206" width="320" height="46" rx="6" fill="#e2f0e2" stroke="#2ca02c"/>
+    <text x="960" y="225" text-anchor="middle">時間 bi-GRU 大域文脈(δ平均 → 全δbinへ放送)</text>
+    <text x="960" y="241" text-anchor="middle" font-size="10.5" fill="#666">= 井戸レベルの datum 整合(枝合意)</text>
+    <rect x="800" y="262" width="320" height="46" rx="6" fill="#fdeada" stroke="#ed7d31"/>
+    <text x="960" y="281" text-anchor="middle">δ181分布 logits + 回帰精緻化(±2ft)</text>
+    <text x="960" y="297" text-anchor="middle" font-size="10.5" fill="#666">soft出力: posterior mean(hardは死ぬ = v29/v34)</text>
+    <rect x="800" y="318" width="320" height="38" rx="6" fill="#333"/>
+    <text x="960" y="342" text-anchor="middle" fill="#fff" font-weight="bold">予測 TVT = struct(t) + δ̂(t)</text>
+  </g>
+  <line x1="640" y1="230" x2="798" y2="180" stroke="#555" stroke-width="2.2" marker-end="url(#ar)"/>
+  <line x1="960" y1="140" x2="960" y2="148" stroke="#555" stroke-width="1.4" marker-end="url(#ar)"/>
+  <line x1="960" y1="196" x2="960" y2="204" stroke="#555" stroke-width="1.4" marker-end="url(#ar)"/>
+  <line x1="960" y1="252" x2="960" y2="260" stroke="#555" stroke-width="1.4" marker-end="url(#ar)"/>
+  <line x1="960" y1="308" x2="960" y2="316" stroke="#555" stroke-width="1.4" marker-end="url(#ar)"/>
+
+  <!-- 出力の使い道 -->
+  <g font-size="11">
+    <rect x="800" y="376" width="152" height="52" rx="6" fill="#fff" stroke="#2ca02c"/>
+    <text x="876" y="396" text-anchor="middle">単体提出</text>
+    <text x="876" y="412" text-anchor="middle" font-size="10">(submit_v53)</text>
+    <rect x="968" y="376" width="152" height="52" rx="6" fill="#fff" stroke="#9467bd"/>
+    <text x="1044" y="396" text-anchor="middle">v53_feature 4列</text>
+    <text x="1044" y="412" text-anchor="middle" font-size="10">→ v52 GBM/TCN に注入</text>
+    <line x1="900" y1="356" x2="870" y2="374" stroke="#555" stroke-width="1.4" marker-end="url(#ar)"/>
+    <line x1="1020" y1="356" x2="1044" y2="374" stroke="#555" stroke-width="1.4" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- ========== 下段: なぜ効くか(過去実験の根拠) ========== -->
+  <rect x="30" y="470" width="1220" height="120" rx="8" fill="#f4f4f4" stroke="#bbb"/>
+  <text x="50" y="494" font-size="13" font-weight="bold" fill="#333">なぜこの形か(過去実験からの根拠)</text>
+  <g font-size="11.5" fill="#333">
+    <text x="50" y="518">・<tspan font-weight="bold">v34</tspan>: 候補を576本に増やす(=事後を細かく渡す)だけで gate 系最高 LB 5.930 → 本案は「連続の質量場」でその上位互換</text>
+    <text x="50" y="538">・<tspan font-weight="bold">v50B vs StageC</tspan>: 同じ情報でもスカラー集計の検証器は全滅、場のままConvに読ませたら効いた → 多エンジンの陪審員は場として提示する</text>
+    <text x="50" y="558">・<tspan font-weight="bold">v51</tspan>: NN-emissionで全バンクの事後が鋭利化(r0 8.75→7.44)→ 鋭い事後ほど枝質量の読み取り価値が高い、直後が投入の好機</text>
+    <text x="50" y="578">・<tspan font-weight="bold">バンクdropout</tspan>: StageCの敗因=618井戸での混合過学習。チャネル欠落に頑健な読み方を強制(v36「増強は転移で増幅」とも整合)</text>
+  </g>
+
+  <!-- ========== 最下段: 参照線 ========== -->
+  <g font-size="11.5" fill="#555">
+    <text x="50" y="622" font-weight="bold" fill="#333">参照線(全773坑井・正直値):</text>
+    <text x="50" y="644">struct 9.71 → gf_raw 8.97 → v50B(単一エンジン場) 7.78 → 3本等重み 6.76 / v52 GBM 6.27(OOF) / 枝コミットoracle 5.17</text>
+    <text x="50" y="666" fill="#a02020" font-weight="bold">v53 の go 判定: fold0 &lt; 5.77(v50B combo)→ 全坑井 6.x。単体で勝てなくても v53_feature としてスタックへ回収。</text>
+    <text x="50" y="700" fill="#888" font-size="10.5">fold = v50 と同一(sorted wells の f::5)/ 学習: soft CE(σ=1ft)+ 行数重み付き posterior-mean MSE / VRAM 6-7GB(TOKMAX=1200, VFRAC=0.5)</text>
+    <text x="50" y="718" fill="#888" font-size="10.5">test: struct(v46流用)→ sim 自己生成(エンコーダ5本平均)→ PF事後場を submit 内で自己生成(hist パッチ済みエンジン)→ EV23 → DecoderC 5本平均</text>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+[v93 L2 TCN] V93_INPUT=combo  入力=train_combo.parquet  feats=features_l1_fcombo.json  rank=feat_rank_nn_fcombo.json
+RUN=combo {'flip': True, 'prefix': True, 'gbmch': False} | device=cuda torch=2.11.0+cu128 | SMOKE=False
+features_l1.json: 1009列 (struct-free) -> NN入力 1008列 (last_known_tvt除外)
+loaded: main=3783989 total=3783989 wells=773 K=1008 (62s)
+絶対TVT->残差化: 96 列
+[v98] fold0 train wells=618(内aug0) val wells=155
+prefix cache load: 773 wells
+rows 3783989 | wells 773 | K 1008 | t_mean/scale 1.596/15.83
+[combo] mdn2_s0 fold0 [load] rmse=6.2976
+[combo] mdn2_s0 fold1 [load] rmse=6.5770
+[combo] mdn2_s0 fold2 [load] rmse=5.8658
+[combo] mdn2_s0 fold3 [fit best=6.1827] rmse=6.1827
+[combo] mdn2_s0 fold4 [fit best=7.1584] rmse=7.1584
+== [combo] mdn2_s0 OOF raw rmse=6.4310 (1982s)
+saved nn_oof_combo_fcombo_alt-gru.npz keys=['mdn2_s0'] shape=(3783989,)
+[combo] NN単体: raw=6.4310 pp=6.3857 >10=66
+[combo] GBM OOF 未検出 -> blend スキップ(候補: ['gbm_l1_oof.npy', 'gbm_v93_oof.npy', 'gbm_oof.npy'])
+submit_pack_nn_fcombo_alt-gru.json saved: run=combo w_nn=1.0 prefix_stats=(83.38448782396254, 27.21518377216381)
+done.

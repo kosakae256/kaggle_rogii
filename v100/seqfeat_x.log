@@ -1,0 +1,12 @@
+[build_seqfeat_x] ’Ç‰ÁŒó•â 12–{: ['pf_nbr_gr5_delta_4', 'pf_nbr_gr5_delta_5', 'pf_nbr_gr5_delta_6', 'pf_self_graft_delta_4', 'pf_self_graft_delta_5', 'pf_self_graft_delta_6', 'pf_self_delta_4', 'pf_self_delta_5', 'pf_self_delta_6', 'pf_nbr_delta_4', 'pf_nbr_delta_5', 'pf_nbr_delta_6']
+[build_seqfeat_x] EXTRA_DELTA ‡Œv 63–{(Œ»s51 + ’Ç‰Á12)
+[seqfeat] V93_INPUT=fwd å…¥åŠ›=train_combo.parquet å‡ºåŠ›=seqfeat_x83_cf.pkl K=83 (base14 + bpf6 + extra63)
+[seqfeat] CANDFEAT: å€™è£œåˆ¥ç‰¹å¾´ 80åˆ— â†’ å„ãƒˆãƒ¼ã‚¯ãƒ³ã«2å½¹å‰²(nF=2)ä»˜ä¸
+  150/773 (19s)
+  300/773 (20s)
+  450/773 (21s)
+  600/773 (22s)
+  750/773 (23s)
+saved seqfeat_x83_cf.pkl: 773 wells  D(240, 83) (K=14 struct-free)
+  N(total rows)=3783989  nb: min=26 max=629 mean=306.4
+  (23s)

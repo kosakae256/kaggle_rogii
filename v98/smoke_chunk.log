@@ -1,0 +1,7 @@
+[v93 pf_banks] 錨=grfree_anchor_train.pkl 773井 / banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'] / smooth_lag=192
+[full-smoother test] banks=['pf_1'] lag_fix=192 n_seed=32 井=6 VRAM予算=1.2GB maxchunk=64
+bank           井  fixed192      full        差  判定
+pf_1           6    6.1257    5.6605  -0.4652  ★full改善
+
+=== まとめ(fixed-lag192 vs full平滑) ===
+  pf_1       : fixed=6.1257 full=5.6605 差=-0.4652

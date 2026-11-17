@@ -1,0 +1,8 @@
+[v93] 錨prior=grfree_anchor_train.pkl  773井 (anchor_mult/ramp/on-off は P パラメータ)
+[全773井 struct20 n_seed32]
+  ① 錨なし                 = 9.0216
+  ② GRフリー錨(sig=9.0ft)  = 7.8533  (-1.1682)
+  ②' GRフリー錨(元sig=3seed) = 9.9169  (+0.8953)
+  ③ v66 struct錨(元struct20) = 7.4683  (-1.5533)
+
+→ GRフリー錨(sig修正) vs 元struct20(v66錨): +0.3850

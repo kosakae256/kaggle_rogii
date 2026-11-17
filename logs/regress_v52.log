@@ -1,0 +1,19 @@
+[Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.
+[Parallel(n_jobs=4)]: Done   3 out of   6 | elapsed:   15.0s remaining:   15.0s
+[Parallel(n_jobs=4)]: Done   6 out of   6 | elapsed:   16.8s finished
+PF parameter sets:
+  pf_1: suffix=_1, N=600, seeds=8, jump=(0.002, 5.0)
+  pf_2: suffix=_2, N=600, seeds=8, jump=(0.0, 10.0)
+  pf_3: suffix=_3, N=600, seeds=8, jump=(0.002, 5.0)
+  pf_4: suffix=_4, N=400, seeds=8, jump=(0.002, 5.0)
+  pf_5: suffix=_5, N=400, seeds=8, jump=(0.002, 10.0)
+  pf_6: suffix=_6, N=600, seeds=8, jump=(0.002, 10.0)
+[v28] PF: pf_1->pf_1, pf_2->pf_2, pf_3->pf_3, r0_seed32->pf_4, r1_seed32->pf_5, pfA->pf_6
+[train] 使用坑井: 6  PF=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'](smooth, tw/self/nbr各6回=計18回)  lag=16  n_seed=32
+[v52 NN-emission] sim(OOF) load: 773 wells (miss 0)
+[v41] PFパスをキャッシュから復元: pfpass_cache_v52.npz
+[smoothPF-nbr] 近傍探索 ...
+      近傍あり 3/6(残りは通常実行=tw)
+[build] v9 build_well(smooth PF注入) + self/nbr/z_grad 列 ...
+      done 16.9s  parts=6
+[regress v52] saved C:\Users\KOSAKA~1\AppData\Local\Temp\claude\c--Users-kosaka256-Documents-rogii-claude\1c67796e-d953-4c10-8874-a500ac704725\scratchpad\df_v52_6.parquet rows=27945 cols=722 wells=6

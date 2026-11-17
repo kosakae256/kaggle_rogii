@@ -1,0 +1,4 @@
+[v93 pf_banks] 錨=grfree_anchor_train.pkl 773井 / banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'] / smooth_lag=16
+[pfA 40井 n_seed16] NN-emission(GRフリー帯)単体測定:
+  w_nn=0(なし)          = 6.9503
+  w_nn=0.01(GRフリーsim) = 6.6909  (-0.2594)

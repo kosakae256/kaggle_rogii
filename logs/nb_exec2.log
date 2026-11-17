@@ -1,0 +1,119 @@
+
+========== exec cell 0 ==========
+[v93 nb] DATA_DIR = C:\Users\kosaka256\Documents\rogii_claude\rogii-wellbore-geology-prediction
+[v93 nb] ART      = C:\Users\kosaka256\Documents\rogii_claude\v93\artifacts_v93
+[v93 nb] WORK     = C:\Users\kosaka256\Documents\rogii_claude\v93\artifacts_v93\data
+[v93 pf_banks] banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'] smooth_lag=16 n_seed=32 (anchor injected at runtime)
+---- cell0 done (6s) ----
+
+========== exec cell 1 ==========
+[cfg] SUBMIT_MODE=blend  w_nn=0.74
+[cfg] features_l1=True  submit_pack=True  gbm_dir=True  nn_dir=True
+---- cell1 done (0s) ----
+
+========== exec cell 2 ==========
+---- cell2 done (0s) ----
+
+========== exec cell 3 ==========
+loaded FOLD_ART: 5 folds x 3 nets = 15 GRU (再学習なし)  (1s)
+saved C:\Users\kosaka256\Documents\rogii_claude\v93\artifacts_v93\data\grfree_anchor_test.pkl  3井 (GRフリー test アンカー tvt/sig=9.0)
+   000d7d20: eval行=3836  tvt[min/max]=11738.2/11754.1  sig=9.0
+   00bbac68: eval行=6014  tvt[min/max]=12197.8/12237.7  sig=9.0
+   00e12e8b: eval行=4301  tvt[min/max]=11587.9/11614.7  sig=9.0
+[3a] test anchor: 3 wells  (2s)
+[NN-emission] split=test wells=3 錨=grfree_anchor_test.pkl(3井) encoder=全5平均 -> sim_grfree_test_v93.pkl
+sim saved: 3/3 wells -> sim_grfree_test_v93.pkl
+[3b] sims: 3 wells -> sim_grfree_test_v93.pkl  (2s)
+[test] 使用坑井: 3  banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'](tw/self/nbr 各6回=計18回)  lag=16  n_seed=32
+[v93 NN-emission] sim load: 3 wells (対象 miss 0)
+[imputers] FI=765井 / DI点=45960
+[smoothPF-nbr] 近傍探索 ...
+      近傍あり 3/3(残りは通常実行=tw)
+[smoothPF-tw] pf_1 ...
+      done 12.6s
+[smoothPF-self] pf_1 ...
+      done 11.8s
+[smoothPF-nbr] pf_1 ...
+      done 11.7s
+[smoothPF-tw] pf_2 ...
+      done 11.1s
+[smoothPF-self] pf_2 ...
+      done 11.3s
+[smoothPF-nbr] pf_2 ...
+      done 11.2s
+[smoothPF-tw] pf_3 ...
+      done 11.0s
+[smoothPF-self] pf_3 ...
+      done 11.1s
+[smoothPF-nbr] pf_3 ...
+      done 11.1s
+[smoothPF-tw] r0_seed32 ...
+      done 11.1s
+[smoothPF-self] r0_seed32 ...
+      done 11.1s
+[smoothPF-nbr] r0_seed32 ...
+      done 11.2s
+[smoothPF-tw] r1_seed32 ...
+      done 11.5s
+[smoothPF-self] r1_seed32 ...
+      done 11.5s
+[smoothPF-nbr] r1_seed32 ...
+      done 11.4s
+[smoothPF-tw] pfA ...
+      done 11.4s
+[smoothPF-self] pfA ...
+      done 11.4s
+[smoothPF-nbr] pfA ...
+      done 11.3s
+[build] build_well(smooth-PF注入) + self/nbr/z_grad 列 ...
+[Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.
+[Parallel(n_jobs=4)]: Done   3 out of   3 | elapsed:    7.0s finished
+      done 7.1s  parts=3
+[3c] test.parquet rows=14151 cols=721 wells=3 -> C:\Users\kosaka256\Documents\rogii_claude\v93\artifacts_v93\data\test.parquet  (229s)
+[GBM] test rows=14151 feats=719
+   lightgbm-1   pred[mean/min/max]=-2.667/-34.198/15.485
+   lightgbm-2   pred[mean/min/max]=-2.799/-34.813/15.722
+   lightgbm-3   pred[mean/min/max]=-2.721/-34.512/15.829
+   catboost-1   pred[mean/min/max]=-2.718/-35.484/16.975
+   catboost-2   pred[mean/min/max]=-2.583/-35.527/16.900
+   catboost-3   pred[mean/min/max]=-2.528/-35.182/16.635
+   xgboost-1    pred[mean/min/max]=-2.818/-34.616/16.145
+   xgboost-2    pred[mean/min/max]=-2.863/-34.857/15.745
+   xgboost-3    pred[mean/min/max]=-3.125/-35.669/16.308
+[GBM] blend(9) pred[mean/min/max]=-2.758/-34.758/16.133
+[TCN] test rows=14151 K=718 t_mean/scale=1.596/15.830 flip=True prefix=True
+   ckpt s0_fold0: raw mean=-2.449
+   ckpt s0_fold1: raw mean=-1.683
+   ckpt s0_fold2: raw mean=-2.495
+   ckpt s0_fold3: raw mean=-2.696
+   ckpt s0_fold4: raw mean=-2.973
+   ckpt s1_fold0: raw mean=-2.528
+   ckpt s1_fold1: raw mean=-1.442
+   ckpt s1_fold2: raw mean=-2.540
+   ckpt s1_fold3: raw mean=-2.369
+   ckpt s1_fold4: raw mean=-2.622
+   ckpt s2_fold0: raw mean=-2.249
+   ckpt s2_fold1: raw mean=-1.218
+   ckpt s2_fold2: raw mean=-2.558
+   ckpt s2_fold3: raw mean=-2.561
+   ckpt s2_fold4: raw mean=-3.478
+[TCN] 15ckpt 平均 pred[mean/min/max]=-2.391/-35.449/15.051
+[3] mode=blend w_nn=0.74  pred[mean/min/max]=-2.486/-35.078/15.289  tvt[mean]=11903.924  (238s)
+---- cell3 done (238s) ----
+
+========== exec cell 4 ==========
+==== submission [blend] -> C:\Users\kosaka256\Documents\rogii_claude\v93\artifacts_v93\data\submission.csv ====
+rows=14151  sample_rows=14151  match=True  missing(id filled)=0
+tvt finite%=100.00  min=11591.72  max=12238.83  mean=11903.92
+           id          tvt
+000d7d20_1442 11747.078595
+000d7d20_1443 11747.028530
+000d7d20_1444 11747.086176
+000d7d20_1445 11747.147051
+000d7d20_1446 11747.093491
+000d7d20_1447 11747.110322
+000d7d20_1448 11747.102136
+000d7d20_1449 11747.029416
+---- cell4 done (0s) ----
+
+=== 全セル完了 ===

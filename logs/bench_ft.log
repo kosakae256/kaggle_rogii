@@ -1,0 +1,4 @@
+GPU: NVIDIA GeForce RTX 5070 torch 2.11.0+cu128
+warmup 15 step ...
+★train 611ms/step  fwd 134ms/step
+1エポック=953s (15.9分)  15ep想定x15fold=59.6時間

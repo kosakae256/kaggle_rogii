@@ -1,0 +1,12 @@
+train wells=773  (5s)
+K_MEAN alpha=[0.811 0.724 0.617 0.377 0.025]  場donors=12368  (14s)
+build train seqs...
+seqs=773  (33s)
+fold0 done nets+3  (114s)
+fold1 done nets+3  (190s)
+fold2 done nets+3  (268s)
+fold3 done nets+3  (348s)
+fold4 done nets+3  (427s)
+
+★OOF CV(GRフリー GRU) = 9.6197  (engine単体 9.7049)  nets=15  (427s)
+submission.csv saved: 14151 rows  ★CV=9.6197  (427s)

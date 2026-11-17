@@ -1,0 +1,10 @@
+train wells=773  (5s)
+  fold0: val井=155  val CV(GRU)=10.7767  (engine単体 10.9704)  (112s)
+  fold1: val井=155  val CV(GRU)=8.2264  (engine単体 8.6042)  (217s)
+  fold2: val井=155  val CV(GRU)=9.7433  (engine単体 9.8961)  (324s)
+  fold3: val井=154  val CV(GRU)=11.3848  (engine単体 11.4223)  (433s)
+  fold4: val井=154  val CV(GRU)=9.7525  (engine単体 10.1119)  (540s)
+
+★★ OOF CV(GRフリー GRU, val完全除外) = 10.0302  (engine単体 10.2441)
+   fold別 val CV = [10.777, 8.226, 9.743, 11.385, 9.752]
+saved grfree_v2_oof.npz 773 井

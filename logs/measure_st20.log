@@ -1,0 +1,16 @@
+[v92 GRフリー錨] structgate(K=0.02,SG=6.0) + NN emission(W=0.01)  SP=0井 SIM=773井
+[v92] V92_ANCHOR=off  V92_EMISSION=True
+PF parameter sets:
+  pf_1: suffix=_1, N=700, seeds=32, jump=(0.002, 5.0)
+  pf_2: suffix=_2, N=600, seeds=32, jump=(0.002, 5.0)
+  pf_3: suffix=_3, N=800, seeds=32, jump=(0.002, 5.0)
+  pf_4: suffix=_4, N=800, seeds=32, jump=(0.0, 20.0)
+  pf_5: suffix=_5, N=700, seeds=32, jump=(0.0, 10.0)
+struct20: anchor_mult=20.0 use_anchor=True gr_power=1.852
+測定well=20 NSEED=32 LAG=0
+struct20 錨なし 実行...
+struct20 GRフリー錨 実行...
+
+[struct20 単体PF, 20井, n_seed32, 非smooth]
+  錨なし         = 6.765
+  ★GRフリー錨    = 9.494  (+2.728)

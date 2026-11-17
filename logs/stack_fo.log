@@ -1,0 +1,9 @@
+  200 (294s)
+  400 (595s)
+  600 (891s)
+
+[3脚stack 771井] base=6.3211
+  ρ(v90,snap)=0.616 ρ(v90,v74)=0.614 ρ(snap,v74)=0.334
+  v90+snap        field-out=6.2953
+  v90+v74         field-out=6.3359
+  ★v90+snap+v74   field-out=6.2762

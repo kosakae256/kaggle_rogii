@@ -1,0 +1,24 @@
+eval RMSE 集計井=773
+  200/773
+  400/773
+  600/773
+
+有効井=773  grcorr平均: full=0.825  200MD窓=0.454  (200MD窓 中央値=0.588 標準偏差=0.442)
+200MD窓の平均点数=200
+
+=== grcorr が eval精度を予測するか(井戸横断 Spearman, 負=高相関→低誤差) ===
+  full-prefix(縦込)      vs tw RMSE     : Spearman=-0.007 Pearson=-0.041 (n=773)
+  full-prefix(縦込)      vs oracle RMSE : Spearman=+0.003 Pearson=-0.035 (n=773)
+  full-prefix(縦込)      vs 平均RMSE      : Spearman=-0.009 Pearson=-0.047 (n=773)
+  直近200MD(水平)          vs tw RMSE     : Spearman=-0.066 Pearson=+0.023 (n=773)
+  直近200MD(水平)          vs oracle RMSE : Spearman=-0.086 Pearson=+0.020 (n=773)
+  直近200MD(水平)          vs 平均RMSE      : Spearman=-0.068 Pearson=+0.017 (n=773)
+
+=== 直近200MD grcorr 五分位 → 平均 tw RMSE(単調低下なら予測力) ===
+  Q1 grcorr[-0.93,+0.10]: 平均twRMSE=5.274 (n=155)
+  Q2 grcorr[+0.10,+0.47]: 平均twRMSE=6.586 (n=154)
+  Q3 grcorr[+0.47,+0.70]: 平均twRMSE=6.006 (n=155)
+  Q4 grcorr[+0.70,+0.84]: 平均twRMSE=5.818 (n=154)
+  Q5 grcorr[+0.84,+0.99]: 平均twRMSE=5.418 (n=155)
+
+saved v98/prefix200_grcorr.png

@@ -1,0 +1,15 @@
+### 全773 一般化確認 ###
+=== 全773 emission BETA=0.0 00:08:14 ===
+[v90.0] guided PF (BETA=0.0) fold0 overall RMSE = 8.7501  (r0 fold0=8.03 と比較)
+=== 全773 emission BETA=0.01 00:18:35 ===
+[v90.0] guided PF (BETA=0.01) fold0 overall RMSE = 7.6699  (r0 fold0=8.03 と比較)
+### fold0 W微調整 ###
+=== fold0 emission BETA=0.005 00:31:34 ===
+[v90.0] guided PF (BETA=0.005) fold0 overall RMSE = 7.2533  (r0 fold0=8.03 と比較)
+=== fold0 emission BETA=0.008 00:34:30 ===
+[v90.0] guided PF (BETA=0.008) fold0 overall RMSE = 7.3363  (r0 fold0=8.03 と比較)
+=== fold0 emission BETA=0.012 00:37:29 ===
+[v90.0] guided PF (BETA=0.012) fold0 overall RMSE = 8.1454  (r0 fold0=8.03 と比較)
+=== fold0 emission BETA=0.015 00:40:24 ===
+[v90.0] guided PF (BETA=0.015) fold0 overall RMSE = 7.9720  (r0 fold0=8.03 と比較)
+=== done 00:43:23 ===

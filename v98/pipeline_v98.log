@@ -1,0 +1,1026 @@
+########## CREATE SYSTEM=normal 20:40 ##########
+[create_v98] SYSTEM=normal chunk=20 NWELLS=None FOLD_ART=grfree_fold_art.pkl
+
+==== normal v96create: create_v95.py ====
+[Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.
+[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:   34.6s
+[Parallel(n_jobs=4)]: Done  64 tasks      | elapsed:  2.9min
+[Parallel(n_jobs=4)]: Done 154 tasks      | elapsed:  6.7min
+[Parallel(n_jobs=4)]: Done 280 tasks      | elapsed: 12.1min
+[Parallel(n_jobs=4)]: Done 442 tasks      | elapsed: 19.0min
+[Parallel(n_jobs=4)]: Done 640 tasks      | elapsed: 27.6min
+[Parallel(n_jobs=4)]: Done 773 out of 773 | elapsed: 33.2min finished
+[v93 pf_banks] 錨=grfree_anchor_train.pkl 773井 / banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'] / smooth_lag=192
+[v95] device=cuda smooth_lag=192 n_seed=32 chunk=60 NWELLS=None (NN-emission/逆方向 なし)
+[train] 使用坑井: 773  banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'] x 5表現=['tw', 'self', 'nbr', 'nbr_gr5', 'self_graft']  lag=192 n_seed=32 (NN-emission OFF)
+[imputers] FI=765井 / DI点=45960
+[nbr] 近傍探索(距離top3 & GR類似top5) + provenance ...
+      近傍あり 583/773 / GR類似あり 773/773  (58.3s)
+[smoothPF-tw] pf_1 ...
+      done 924.6s
+[smoothPF-self] pf_1 ...
+      done 921.6s
+[smoothPF-nbr] pf_1 ...
+      done 920.4s
+[smoothPF-nbr_gr5] pf_1 ...
+      done 921.4s
+[smoothPF-self_graft] pf_1 ...
+      done 912.2s
+[smoothPF-tw] pf_2 ...
+      done 978.6s
+[smoothPF-self] pf_2 ...
+      done 988.2s
+[smoothPF-nbr] pf_2 ...
+      done 987.4s
+[smoothPF-nbr_gr5] pf_2 ...
+      done 989.0s
+[smoothPF-self_graft] pf_2 ...
+      done 983.9s
+[smoothPF-tw] pf_3 ...
+      done 891.1s
+[smoothPF-self] pf_3 ...
+      done 900.0s
+[smoothPF-nbr] pf_3 ...
+      done 900.3s
+[smoothPF-nbr_gr5] pf_3 ...
+      done 902.4s
+[smoothPF-self_graft] pf_3 ...
+      done 897.5s
+[smoothPF-tw] r0_seed32 ...
+      done 697.0s
+[smoothPF-self] r0_seed32 ...
+      done 703.4s
+[smoothPF-nbr] r0_seed32 ...
+      done 703.9s
+[smoothPF-nbr_gr5] r0_seed32 ...
+      done 703.2s
+[smoothPF-self_graft] r0_seed32 ...
+      done 700.4s
+[smoothPF-tw] r1_seed32 ...
+      done 740.6s
+[smoothPF-self] r1_seed32 ...
+      done 745.5s
+[smoothPF-nbr] r1_seed32 ...
+      done 745.9s
+[smoothPF-nbr_gr5] r1_seed32 ...
+      done 748.4s
+[smoothPF-self_graft] r1_seed32 ...
+      done 744.4s
+[smoothPF-tw] pfA ...
+      done 958.2s
+[smoothPF-self] pfA ...
+      done 960.8s
+[smoothPF-nbr] pfA ...
+      done 963.0s
+[smoothPF-nbr_gr5] pfA ...
+      done 961.6s
+[smoothPF-self_graft] pfA ...
+      done 958.5s
+[build] build_well(tw注入) + 5表現/provenance 列 ...
+      done 1993.4s  parts=773
+
+saved: C:\Users\kosaka256\Documents\rogii_claude\v98\artifacts_v98\data\v96_normal.parquet  rows=3783989 cols=845 wells=773
+  pf_self* = 78 列
+  pf_nbr* = 75 列
+  pf_nbr_gr5* = 39 列
+  pf_self_graft* = 39 列
+  prov_* = 33 列
+  pf_* = 428 列
+
+==== normal v97create: create_v97.py ====
+[Parallel(n_jobs=4)]: Using backend ThreadingBackend with 4 concurrent workers.
+[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:   25.1s
+[Parallel(n_jobs=4)]: Done  64 tasks      | elapsed:  2.3min
+[Parallel(n_jobs=4)]: Done 154 tasks      | elapsed:  5.4min
+[Parallel(n_jobs=4)]: Done 280 tasks      | elapsed:  9.7min
+[Parallel(n_jobs=4)]: Done 442 tasks      | elapsed: 15.3min
+[Parallel(n_jobs=4)]: Done 640 tasks      | elapsed: 22.2min
+[Parallel(n_jobs=4)]: Done 773 out of 773 | elapsed: 26.8min finished
+[v93 pf_banks] 錨=grfree_anchor_train.pkl 773井 / banks=['pf_1', 'pf_2', 'pf_3', 'pf_4'] / smooth_lag=192
+[v97] device=cuda smooth_lag=192 n_seed=32 chunk=60 NWELLS=None (NN-emission ON / 逆方向なし)
+[train] 使用坑井: 773  banks=['pf_1', 'pf_2', 'pf_3', 'pf_4'] x 5表現=['tw', 'self', 'nbr', 'nbr_gr5', 'self_graft']  lag=192 n_seed=32 (NN-emission ON)
+[imputers] FI=765井 / DI点=45960
+[nbr] 近傍探索(距離top3 & GR類似top5) + provenance ...
+      近傍あり 583/773 / GR類似あり 773/773  (51.5s)
+[v97 NN-emission] sim load: 773 wells  <- sim_grfree_v97.pkl
+[smoothPF-tw] pf_1 ...
+      done 1096.5s
+[smoothPF-self] pf_1 ...
+      done 1100.0s
+[smoothPF-nbr] pf_1 ...
+      done 1194.1s
+[smoothPF-nbr_gr5] pf_1 ...
+      done 1501.5s
+[smoothPF-self_graft] pf_1 ...
+      done 1436.5s
+[smoothPF-tw] pf_2 ...
+      done 943.8s
+[smoothPF-self] pf_2 ...
+      done 893.0s
+[smoothPF-nbr] pf_2 ...
+      done 994.8s
+[smoothPF-nbr_gr5] pf_2 ...
+      done 1041.7s
+[smoothPF-self_graft] pf_2 ...
+      done 948.1s
+[smoothPF-tw] pf_3 ...
+      done 1070.7s
+[smoothPF-self] pf_3 ...
+      done 1026.2s
+[smoothPF-nbr] pf_3 ...
+      done 1013.6s
+[smoothPF-nbr_gr5] pf_3 ...
+      done 1042.9s
+[smoothPF-self_graft] pf_3 ...
+      done 1068.1s
+[smoothPF-tw] pf_4 ...
+      done 1027.0s
+[smoothPF-self] pf_4 ...
+      done 1026.9s
+[smoothPF-nbr] pf_4 ...
+      done 1037.3s
+[smoothPF-nbr_gr5] pf_4 ...
+      done 1034.7s
+[smoothPF-self_graft] pf_4 ...
+      done 1020.5s
+[build] build_well(tw注入) + 5表現/provenance 列 ...
+      done 1605.6s  parts=773
+
+saved: C:\Users\kosaka256\Documents\rogii_claude\v98\artifacts_v98\data\v97_normal.parquet  rows=3783989 cols=705 wells=773
+  pf_self* = 54 列
+  pf_nbr* = 53 列
+  pf_nbr_gr5* = 27 列
+  pf_self_graft* = 27 列
+  prov_* = 33 列
+  pf_* = 310 列
+
+==== combo 結合 ====
+[combo] train_combo.parquet 完成 行=3783989 列=1274
+
+[create_v98] SYSTEM=normal 完了 -> C:\Users\kosaka256\Documents\rogii_claude\v98\artifacts_v98\data\train_combo.parquet
+########## CREATE SYSTEM=bwd 11:05 ##########
+[create_v98] SYSTEM=bwd chunk=20 NWELLS=None FOLD_ART=grfree_fold_art.pkl
+[create_v98] ★SKIP_DA: SYSTEM=bwd をスキップ(DA資産は保持)
+########## CREATE SYSTEM=fwd 11:05 ##########
+[create_v98] SYSTEM=fwd chunk=20 NWELLS=None FOLD_ART=grfree_fold_art.pkl
+[create_v98] ★SKIP_DA: SYSTEM=fwd をスキップ(DA資産は保持)
+########## TRAIN (TCN+L5 5seed+DA) 11:05 ##########
+[run_train_v98] ★SKIP_DA: normalのみ学習(aug seqfeat/DA連結なし)
+
+==== seqfeat[main]: build_seqfeat_v97.py ====
+[seqfeat] V93_INPUT=fwd 入力=train_combo.parquet 出力=seqfeat_combo_cf.pkl K=46 (base14 + bpf6 + extra26)
+[seqfeat] CANDFEAT: 候補別特徴 68列 → 各トークンに2役割(nF=2)付与
+  150/773 (13s)
+  300/773 (14s)
+  450/773 (15s)
+  600/773 (16s)
+  750/773 (16s)
+saved seqfeat_combo_cf.pkl: 773 wells  D(240, 46) (K=14 struct-free)
+  N(total rows)=3783989  nb: min=26 max=629 mean=306.4
+  (17s)
+
+==== TCN(5seed): train_nn_v98.py ====
+[v93 L2 TCN] V93_INPUT=combo  入力=train_combo.parquet  feats=features_l1_fcombo.json  rank=feat_rank_nn_fcombo.json
+RUN=combo {'flip': True, 'prefix': True, 'gbmch': False} | device=cuda torch=2.11.0+cu128 | SMOKE=False
+features_l1.json: 1009列 (struct-free) -> NN入力 1008列 (last_known_tvt除外)
+loaded: main=3783989 total=3783989 wells=773 K=1008 (61s)
+絶対TVT->残差化: 96 列
+[v98] fold0 train wells=618(内aug0) val wells=155
+prefix extracted: 773 wells | gr med/iqr 83.4 27.2
+rows 3783989 | wells 773 | K 1008 | t_mean/scale 1.596/15.83
+[combo] mdn2_s0 fold0 [fit best=5.9629] rmse=5.9629
+[combo] mdn2_s0 fold1 [fit best=6.3960] rmse=6.3960
+[combo] mdn2_s0 fold2 [fit best=5.6817] rmse=5.6817
+[combo] mdn2_s0 fold3 [fit best=5.8405] rmse=5.8405
+[combo] mdn2_s0 fold4 [fit best=6.5782] rmse=6.5782
+== [combo] mdn2_s0 OOF raw rmse=6.1012 (1686s)
+[combo] mdn2_s1 fold0 [fit best=6.0433] rmse=6.0433
+[combo] mdn2_s1 fold1 [fit best=6.4320] rmse=6.4320
+[combo] mdn2_s1 fold2 [fit best=5.6212] rmse=5.6212
+[combo] mdn2_s1 fold3 [fit best=5.6936] rmse=5.6936
+[combo] mdn2_s1 fold4 [fit best=6.5726] rmse=6.5726
+== [combo] mdn2_s1 OOF raw rmse=6.0845 (1664s)
+[combo] mdn2_s2 fold0 [fit best=6.0400] rmse=6.0400
+[combo] mdn2_s2 fold1 [fit best=6.3798] rmse=6.3798
+[combo] mdn2_s2 fold2 [fit best=5.5021] rmse=5.5021
+[combo] mdn2_s2 fold3 [fit best=5.7612] rmse=5.7612
+[combo] mdn2_s2 fold4 [fit best=6.5997] rmse=6.5997
+== [combo] mdn2_s2 OOF raw rmse=6.0696 (1671s)
+[combo] mdn2_s3 fold0 [fit best=5.9818] rmse=5.9818
+[combo] mdn2_s3 fold1 [fit best=6.5238] rmse=6.5238
+[combo] mdn2_s3 fold2 [fit best=5.6097] rmse=5.6097
+[combo] mdn2_s3 fold3 [fit best=5.8368] rmse=5.8368
+[combo] mdn2_s3 fold4 [fit best=6.4508] rmse=6.4508
+== [combo] mdn2_s3 OOF raw rmse=6.0908 (1645s)
+[combo] mdn2_s4 fold0 [fit best=6.1231] rmse=6.1231
+[combo] mdn2_s4 fold1 [fit best=6.3958] rmse=6.3958
+[combo] mdn2_s4 fold2 [fit best=5.5696] rmse=5.5696
+[combo] mdn2_s4 fold3 [fit best=5.9220] rmse=5.9220
+[combo] mdn2_s4 fold4 [fit best=6.5686] rmse=6.5686
+== [combo] mdn2_s4 OOF raw rmse=6.1259 (1775s)
+saved nn_oof_combo_fcombo.npz keys=['mdn2_s0', 'mdn2_s1', 'mdn2_s2', 'mdn2_s3', 'mdn2_s4'] shape=(3783989,)
+== [combo] 5-seed ensemble OOF raw rmse=6.0047
+[combo] NN単体: raw=6.0047 pp=6.0429 >10=57
+[combo] GBM OOF 未検出 -> blend スキップ(候補: ['gbm_l1_oof.npy', 'gbm_v93_oof.npy', 'gbm_oof.npy'])
+submit_pack_nn_fcombo.json saved: run=combo w_nn=1.0 prefix_stats=(83.38448782396254, 27.21518377216381)
+done.
+
+==== L5(5seed): train_l456_v98.py ====
+wells=773 K=46 V93_INPUT=combo SF=seqfeat_combo_cf.pkl ARCH=l5 SMOKE=False SEEDS=[0, 1, 2, 3, 4] (0s)
+folds built: N=3783989 wells_used=773 (fold sizes: [155, 155, 154, 155, 154])
+seed0 fold0 [train] trn=618 val=155
+  s0 ep1 train=44.061 val=42.288 *best (bad=0, 2s)
+  s0 ep2 train=40.051 val=39.929 *best (bad=0, 3s)
+  s0 ep3 train=39.264 val=41.901 (bad=1, 4s)
+  s0 ep4 train=37.138 val=43.801 (bad=2, 5s)
+  s0 ep5 train=40.897 val=43.377 (bad=3, 6s)
+  s0 ep6 train=41.037 val=39.078 *best (bad=0, 7s)
+  s0 ep7 train=38.478 val=38.016 *best (bad=0, 8s)
+  s0 ep8 train=37.403 val=37.507 *best (bad=0, 9s)
+  s0 ep9 train=38.849 val=36.899 *best (bad=0, 9s)
+  s0 ep10 train=36.863 val=36.430 *best (bad=0, 10s)
+  s0 ep11 train=37.621 val=36.931 (bad=1, 11s)
+  s0 ep12 train=37.497 val=37.436 (bad=2, 12s)
+  s0 ep13 train=37.087 val=38.898 (bad=3, 12s)
+  s0 ep14 train=36.625 val=38.287 (bad=4, 13s)
+  s0 ep15 train=37.625 val=39.104 (bad=5, 14s)
+  s0 ep16 train=32.729 val=40.053 (bad=6, 15s)
+  s0 ep17 train=32.934 val=40.003 (bad=7, 16s)
+  s0 ep18 train=34.232 val=37.369 (bad=8, 16s)
+  s0 ep19 train=33.988 val=37.340 (bad=9, 17s)
+  s0 ep20 train=34.590 val=36.530 (bad=10, 18s)
+  s0 ep21 train=31.368 val=38.003 (bad=11, 19s)
+  s0 ep22 train=32.874 val=39.013 (bad=12, 19s)
+  s0 stop @ep22 best=36.430
+seed0 fold1 [train] trn=618 val=155
+  s1 ep1 train=41.986 val=42.222 *best (bad=0, 1s)
+  s1 ep2 train=41.210 val=45.267 (bad=1, 2s)
+  s1 ep3 train=39.306 val=41.637 *best (bad=0, 2s)
+  s1 ep4 train=42.638 val=40.460 *best (bad=0, 3s)
+  s1 ep5 train=37.676 val=37.777 *best (bad=0, 4s)
+  s1 ep6 train=42.174 val=43.159 (bad=1, 5s)
+  s1 ep7 train=39.081 val=42.386 (bad=2, 5s)
+  s1 ep8 train=38.014 val=38.346 (bad=3, 6s)
+  s1 ep9 train=36.206 val=39.502 (bad=4, 7s)
+  s1 ep10 train=35.869 val=40.664 (bad=5, 8s)
+  s1 ep11 train=34.217 val=40.454 (bad=6, 9s)
+  s1 ep12 train=33.470 val=39.060 (bad=7, 9s)
+  s1 ep13 train=33.721 val=38.303 (bad=8, 10s)
+  s1 ep14 train=35.358 val=40.526 (bad=9, 11s)
+  s1 ep15 train=32.981 val=40.280 (bad=10, 12s)
+  s1 ep16 train=32.356 val=38.462 (bad=11, 12s)
+  s1 ep17 train=33.090 val=38.402 (bad=12, 13s)
+  s1 stop @ep17 best=37.777
+seed0 fold2 [train] trn=619 val=154
+  s2 ep1 train=43.052 val=30.725 *best (bad=0, 1s)
+  s2 ep2 train=43.164 val=30.186 *best (bad=0, 2s)
+  s2 ep3 train=41.592 val=30.370 (bad=1, 2s)
+  s2 ep4 train=41.173 val=32.050 (bad=2, 3s)
+  s2 ep5 train=39.875 val=28.449 *best (bad=0, 4s)
+  s2 ep6 train=39.920 val=32.531 (bad=1, 5s)
+  s2 ep7 train=38.711 val=30.354 (bad=2, 5s)
+  s2 ep8 train=36.808 val=29.997 (bad=3, 6s)
+  s2 ep9 train=37.275 val=35.416 (bad=4, 7s)
+  s2 ep10 train=37.798 val=31.039 (bad=5, 8s)
+  s2 ep11 train=35.511 val=30.710 (bad=6, 8s)
+  s2 ep12 train=37.996 val=29.890 (bad=7, 9s)
+  s2 ep13 train=35.434 val=28.818 (bad=8, 10s)
+  s2 ep14 train=34.892 val=30.721 (bad=9, 11s)
+  s2 ep15 train=37.507 val=29.986 (bad=10, 11s)
+  s2 ep16 train=33.690 val=28.742 (bad=11, 12s)
+  s2 ep17 train=32.887 val=28.084 *best (bad=0, 13s)
+  s2 ep18 train=33.446 val=28.018 *best (bad=0, 14s)
+  s2 ep19 train=32.231 val=29.547 (bad=1, 14s)
+  s2 ep20 train=32.458 val=29.660 (bad=2, 15s)
+  s2 ep21 train=31.812 val=29.229 (bad=3, 16s)
+  s2 ep22 train=32.371 val=29.459 (bad=4, 17s)
+  s2 ep23 train=32.486 val=28.767 (bad=5, 18s)
+  s2 ep24 train=33.475 val=28.470 (bad=6, 18s)
+  s2 ep25 train=31.116 val=29.708 (bad=7, 19s)
+  s2 ep26 train=31.559 val=28.794 (bad=8, 20s)
+  s2 ep27 train=32.830 val=29.082 (bad=9, 21s)
+  s2 ep28 train=30.831 val=28.305 (bad=10, 21s)
+  s2 ep29 train=30.802 val=29.185 (bad=11, 22s)
+  s2 ep30 train=31.754 val=29.164 (bad=12, 23s)
+  s2 stop @ep30 best=28.018
+seed0 fold3 [train] trn=618 val=155
+  s3 ep1 train=45.409 val=43.316 *best (bad=0, 1s)
+  s3 ep2 train=43.565 val=34.101 *best (bad=0, 2s)
+  s3 ep3 train=41.990 val=35.118 (bad=1, 2s)
+  s3 ep4 train=39.905 val=33.250 *best (bad=0, 3s)
+  s3 ep5 train=37.421 val=34.107 (bad=1, 4s)
+  s3 ep6 train=37.554 val=32.674 *best (bad=0, 5s)
+  s3 ep7 train=38.801 val=31.693 *best (bad=0, 5s)
+  s3 ep8 train=37.831 val=33.193 (bad=1, 6s)
+  s3 ep9 train=37.620 val=33.146 (bad=2, 7s)
+  s3 ep10 train=35.850 val=32.360 (bad=3, 8s)
+  s3 ep11 train=35.741 val=34.778 (bad=4, 9s)
+  s3 ep12 train=35.723 val=31.032 *best (bad=0, 9s)
+  s3 ep13 train=34.886 val=31.796 (bad=1, 10s)
+  s3 ep14 train=36.534 val=31.253 (bad=2, 11s)
+  s3 ep15 train=33.990 val=33.848 (bad=3, 12s)
+  s3 ep16 train=34.552 val=33.085 (bad=4, 12s)
+  s3 ep17 train=35.327 val=31.033 (bad=5, 13s)
+  s3 ep18 train=33.455 val=33.602 (bad=6, 14s)
+  s3 ep19 train=31.579 val=32.487 (bad=7, 15s)
+  s3 ep20 train=33.081 val=33.783 (bad=8, 16s)
+  s3 ep21 train=32.886 val=31.580 (bad=9, 16s)
+  s3 ep22 train=31.293 val=32.882 (bad=10, 17s)
+  s3 ep23 train=31.002 val=32.938 (bad=11, 18s)
+  s3 ep24 train=31.206 val=32.228 (bad=12, 19s)
+  s3 stop @ep24 best=31.032
+seed0 fold4 [train] trn=619 val=154
+  s4 ep1 train=36.715 val=47.933 *best (bad=0, 1s)
+  s4 ep2 train=37.623 val=47.061 *best (bad=0, 2s)
+  s4 ep3 train=36.739 val=46.256 *best (bad=0, 2s)
+  s4 ep4 train=35.991 val=45.651 *best (bad=0, 3s)
+  s4 ep5 train=34.672 val=44.687 *best (bad=0, 4s)
+  s4 ep6 train=35.082 val=49.723 (bad=1, 5s)
+  s4 ep7 train=34.662 val=44.003 *best (bad=0, 5s)
+  s4 ep8 train=34.589 val=43.403 *best (bad=0, 6s)
+  s4 ep9 train=33.361 val=43.752 (bad=1, 7s)
+  s4 ep10 train=40.340 val=43.002 *best (bad=0, 8s)
+  s4 ep11 train=33.212 val=47.229 (bad=1, 8s)
+  s4 ep12 train=31.855 val=42.358 *best (bad=0, 9s)
+  s4 ep13 train=32.984 val=42.653 (bad=1, 10s)
+  s4 ep14 train=31.769 val=40.890 *best (bad=0, 11s)
+  s4 ep15 train=30.855 val=45.857 (bad=1, 12s)
+  s4 ep16 train=32.144 val=41.368 (bad=2, 12s)
+  s4 ep17 train=30.836 val=42.404 (bad=3, 13s)
+  s4 ep18 train=30.234 val=42.835 (bad=4, 14s)
+  s4 ep19 train=31.182 val=40.138 *best (bad=0, 15s)
+  s4 ep20 train=29.507 val=38.146 *best (bad=0, 15s)
+  s4 ep21 train=29.788 val=41.548 (bad=1, 16s)
+  s4 ep22 train=29.709 val=41.009 (bad=2, 17s)
+  s4 ep23 train=29.171 val=40.663 (bad=3, 18s)
+  s4 ep24 train=28.567 val=37.352 *best (bad=0, 18s)
+  s4 ep25 train=28.126 val=39.130 (bad=1, 19s)
+  s4 ep26 train=27.742 val=37.365 (bad=2, 20s)
+  s4 ep27 train=28.661 val=39.603 (bad=3, 21s)
+  s4 ep28 train=28.095 val=39.657 (bad=4, 21s)
+  s4 ep29 train=27.183 val=43.508 (bad=5, 22s)
+  s4 ep30 train=26.570 val=39.147 (bad=6, 23s)
+  s4 ep31 train=26.565 val=38.685 (bad=7, 24s)
+  s4 ep32 train=26.625 val=39.112 (bad=8, 25s)
+  s4 ep33 train=25.584 val=41.172 (bad=9, 25s)
+  s4 ep34 train=25.726 val=39.541 (bad=10, 26s)
+  s4 ep35 train=25.174 val=39.397 (bad=11, 27s)
+  s4 ep36 train=24.814 val=38.771 (bad=12, 28s)
+  s4 stop @ep36 best=37.352
+== seed0 OOF per-row(target) RMSE = 5.9199  (filled 3783989/3783989)
+seed1 fold0 [train] trn=618 val=155
+  s100 ep1 train=42.164 val=41.931 *best (bad=0, 1s)
+  s100 ep2 train=41.149 val=39.273 *best (bad=0, 2s)
+  s100 ep3 train=37.826 val=50.760 (bad=1, 2s)
+  s100 ep4 train=39.004 val=50.491 (bad=2, 3s)
+  s100 ep5 train=40.650 val=39.414 (bad=3, 4s)
+  s100 ep6 train=36.489 val=41.832 (bad=4, 5s)
+  s100 ep7 train=37.254 val=40.257 (bad=5, 5s)
+  s100 ep8 train=36.649 val=46.790 (bad=6, 6s)
+  s100 ep9 train=36.035 val=47.807 (bad=7, 7s)
+  s100 ep10 train=33.202 val=39.111 *best (bad=0, 8s)
+  s100 ep11 train=33.941 val=38.980 *best (bad=0, 8s)
+  s100 ep12 train=32.917 val=37.538 *best (bad=0, 9s)
+  s100 ep13 train=34.369 val=40.609 (bad=1, 10s)
+  s100 ep14 train=32.993 val=43.919 (bad=2, 11s)
+  s100 ep15 train=35.125 val=41.414 (bad=3, 11s)
+  s100 ep16 train=31.411 val=38.485 (bad=4, 12s)
+  s100 ep17 train=34.766 val=45.471 (bad=5, 13s)
+  s100 ep18 train=32.367 val=39.891 (bad=6, 14s)
+  s100 ep19 train=30.694 val=41.307 (bad=7, 14s)
+  s100 ep20 train=30.155 val=41.395 (bad=8, 15s)
+  s100 ep21 train=32.655 val=43.836 (bad=9, 16s)
+  s100 ep22 train=30.331 val=43.167 (bad=10, 17s)
+  s100 ep23 train=29.480 val=42.835 (bad=11, 18s)
+  s100 ep24 train=30.581 val=42.060 (bad=12, 18s)
+  s100 stop @ep24 best=37.538
+seed1 fold1 [train] trn=618 val=155
+  s101 ep1 train=45.582 val=43.891 *best (bad=0, 1s)
+  s101 ep2 train=39.937 val=40.803 *best (bad=0, 2s)
+  s101 ep3 train=39.875 val=40.317 *best (bad=0, 2s)
+  s101 ep4 train=40.424 val=42.165 (bad=1, 3s)
+  s101 ep5 train=52.861 val=39.056 *best (bad=0, 4s)
+  s101 ep6 train=36.024 val=40.533 (bad=1, 5s)
+  s101 ep7 train=36.670 val=40.517 (bad=2, 5s)
+  s101 ep8 train=37.178 val=39.067 (bad=3, 6s)
+  s101 ep9 train=37.280 val=41.186 (bad=4, 7s)
+  s101 ep10 train=36.355 val=43.814 (bad=5, 8s)
+  s101 ep11 train=33.307 val=40.965 (bad=6, 8s)
+  s101 ep12 train=35.024 val=39.187 (bad=7, 9s)
+  s101 ep13 train=32.703 val=38.826 *best (bad=0, 10s)
+  s101 ep14 train=32.686 val=38.783 *best (bad=0, 11s)
+  s101 ep15 train=32.589 val=38.634 *best (bad=0, 11s)
+  s101 ep16 train=34.217 val=39.052 (bad=1, 12s)
+  s101 ep17 train=31.553 val=38.884 (bad=2, 13s)
+  s101 ep18 train=30.355 val=39.452 (bad=3, 14s)
+  s101 ep19 train=31.223 val=39.409 (bad=4, 14s)
+  s101 ep20 train=32.156 val=38.738 (bad=5, 15s)
+  s101 ep21 train=29.902 val=39.287 (bad=6, 16s)
+  s101 ep22 train=31.324 val=39.277 (bad=7, 17s)
+  s101 ep23 train=32.068 val=39.085 (bad=8, 17s)
+  s101 ep24 train=29.593 val=39.307 (bad=9, 18s)
+  s101 ep25 train=30.558 val=39.016 (bad=10, 19s)
+  s101 ep26 train=28.559 val=39.041 (bad=11, 20s)
+  s101 ep27 train=28.474 val=38.912 (bad=12, 20s)
+  s101 stop @ep27 best=38.634
+seed1 fold2 [train] trn=619 val=154
+  s102 ep1 train=48.491 val=31.751 *best (bad=0, 1s)
+  s102 ep2 train=39.146 val=29.846 *best (bad=0, 2s)
+  s102 ep3 train=40.438 val=29.732 *best (bad=0, 2s)
+  s102 ep4 train=40.866 val=27.861 *best (bad=0, 3s)
+  s102 ep5 train=40.845 val=29.766 (bad=1, 4s)
+  s102 ep6 train=39.629 val=28.679 (bad=2, 5s)
+  s102 ep7 train=39.410 val=29.748 (bad=3, 5s)
+  s102 ep8 train=38.815 val=29.176 (bad=4, 6s)
+  s102 ep9 train=36.118 val=30.169 (bad=5, 7s)
+  s102 ep10 train=37.869 val=30.944 (bad=6, 8s)
+  s102 ep11 train=34.830 val=30.214 (bad=7, 8s)
+  s102 ep12 train=34.725 val=29.773 (bad=8, 9s)
+  s102 ep13 train=34.121 val=30.416 (bad=9, 10s)
+  s102 ep14 train=35.438 val=29.764 (bad=10, 11s)
+  s102 ep15 train=32.417 val=28.485 (bad=11, 11s)
+  s102 ep16 train=33.362 val=29.264 (bad=12, 12s)
+  s102 stop @ep16 best=27.861
+seed1 fold3 [train] trn=618 val=155
+  s103 ep1 train=47.089 val=34.924 *best (bad=0, 1s)
+  s103 ep2 train=40.110 val=37.180 (bad=1, 2s)
+  s103 ep3 train=41.277 val=36.279 (bad=2, 2s)
+  s103 ep4 train=40.339 val=35.796 (bad=3, 3s)
+  s103 ep5 train=38.951 val=32.917 *best (bad=0, 4s)
+  s103 ep6 train=38.863 val=32.179 *best (bad=0, 5s)
+  s103 ep7 train=41.610 val=29.953 *best (bad=0, 5s)
+  s103 ep8 train=39.454 val=35.922 (bad=1, 6s)
+  s103 ep9 train=37.733 val=34.541 (bad=2, 7s)
+  s103 ep10 train=37.187 val=35.569 (bad=3, 8s)
+  s103 ep11 train=37.253 val=33.358 (bad=4, 8s)
+  s103 ep12 train=35.648 val=34.519 (bad=5, 9s)
+  s103 ep13 train=35.853 val=34.383 (bad=6, 10s)
+  s103 ep14 train=33.173 val=31.595 (bad=7, 11s)
+  s103 ep15 train=35.287 val=34.414 (bad=8, 11s)
+  s103 ep16 train=33.691 val=33.852 (bad=9, 12s)
+  s103 ep17 train=33.104 val=31.938 (bad=10, 13s)
+  s103 ep18 train=33.734 val=31.663 (bad=11, 14s)
+  s103 ep19 train=32.686 val=32.967 (bad=12, 14s)
+  s103 stop @ep19 best=29.953
+seed1 fold4 [train] trn=619 val=154
+  s104 ep1 train=37.876 val=47.752 *best (bad=0, 1s)
+  s104 ep2 train=37.137 val=47.105 *best (bad=0, 2s)
+  s104 ep3 train=35.421 val=50.385 (bad=1, 2s)
+  s104 ep4 train=36.149 val=47.716 (bad=2, 3s)
+  s104 ep5 train=35.089 val=47.235 (bad=3, 4s)
+  s104 ep6 train=34.352 val=46.362 *best (bad=0, 5s)
+  s104 ep7 train=33.843 val=46.728 (bad=1, 5s)
+  s104 ep8 train=34.385 val=46.063 *best (bad=0, 6s)
+  s104 ep9 train=34.720 val=54.412 (bad=1, 7s)
+  s104 ep10 train=33.435 val=46.414 (bad=2, 8s)
+  s104 ep11 train=33.627 val=44.851 *best (bad=0, 8s)
+  s104 ep12 train=34.256 val=46.980 (bad=1, 9s)
+  s104 ep13 train=38.095 val=44.649 *best (bad=0, 10s)
+  s104 ep14 train=31.688 val=43.510 *best (bad=0, 11s)
+  s104 ep15 train=31.795 val=50.279 (bad=1, 11s)
+  s104 ep16 train=32.443 val=45.870 (bad=2, 12s)
+  s104 ep17 train=30.075 val=46.302 (bad=3, 13s)
+  s104 ep18 train=32.655 val=42.643 *best (bad=0, 14s)
+  s104 ep19 train=31.238 val=42.060 *best (bad=0, 14s)
+  s104 ep20 train=30.041 val=43.249 (bad=1, 15s)
+  s104 ep21 train=29.424 val=41.260 *best (bad=0, 16s)
+  s104 ep22 train=31.885 val=43.159 (bad=1, 17s)
+  s104 ep23 train=29.219 val=42.493 (bad=2, 18s)
+  s104 ep24 train=29.628 val=40.241 *best (bad=0, 18s)
+  s104 ep25 train=29.874 val=44.223 (bad=1, 19s)
+  s104 ep26 train=28.608 val=41.877 (bad=2, 20s)
+  s104 ep27 train=28.749 val=44.945 (bad=3, 21s)
+  s104 ep28 train=29.278 val=43.442 (bad=4, 21s)
+  s104 ep29 train=28.422 val=42.644 (bad=5, 22s)
+  s104 ep30 train=27.297 val=40.094 *best (bad=0, 23s)
+  s104 ep31 train=26.939 val=40.642 (bad=1, 24s)
+  s104 ep32 train=26.774 val=41.663 (bad=2, 24s)
+  s104 ep33 train=26.964 val=39.180 *best (bad=0, 25s)
+  s104 ep34 train=26.505 val=40.187 (bad=1, 26s)
+  s104 ep35 train=26.289 val=43.130 (bad=2, 27s)
+  s104 ep36 train=26.548 val=40.889 (bad=3, 27s)
+  s104 ep37 train=27.171 val=41.142 (bad=4, 28s)
+  s104 ep38 train=25.958 val=39.140 *best (bad=0, 29s)
+  s104 ep39 train=25.294 val=39.094 *best (bad=0, 30s)
+  s104 ep40 train=25.914 val=40.563 (bad=1, 30s)
+  s104 ep41 train=25.014 val=40.413 (bad=2, 31s)
+  s104 ep42 train=24.969 val=42.727 (bad=3, 32s)
+  s104 ep43 train=25.187 val=39.826 (bad=4, 33s)
+  s104 ep44 train=25.227 val=41.281 (bad=5, 34s)
+  s104 ep45 train=24.683 val=39.505 (bad=6, 34s)
+  s104 ep46 train=24.042 val=39.917 (bad=7, 35s)
+  s104 ep47 train=23.943 val=39.550 (bad=8, 36s)
+  s104 ep48 train=24.610 val=40.276 (bad=9, 37s)
+  s104 ep49 train=23.579 val=41.374 (bad=10, 37s)
+  s104 ep50 train=23.363 val=40.369 (bad=11, 38s)
+  s104 ep51 train=23.258 val=40.146 (bad=12, 39s)
+  s104 stop @ep51 best=39.094
+== seed1 OOF per-row(target) RMSE = 6.0103  (filled 3783989/3783989)
+seed2 fold0 [train] trn=618 val=155
+  s200 ep1 train=44.471 val=42.597 *best (bad=0, 1s)
+  s200 ep2 train=40.407 val=38.069 *best (bad=0, 2s)
+  s200 ep3 train=41.606 val=39.899 (bad=1, 2s)
+  s200 ep4 train=38.132 val=41.655 (bad=2, 3s)
+  s200 ep5 train=36.969 val=37.389 *best (bad=0, 4s)
+  s200 ep6 train=38.424 val=40.624 (bad=1, 5s)
+  s200 ep7 train=36.856 val=39.544 (bad=2, 5s)
+  s200 ep8 train=36.291 val=38.238 (bad=3, 6s)
+  s200 ep9 train=41.299 val=38.098 (bad=4, 7s)
+  s200 ep10 train=36.911 val=38.417 (bad=5, 8s)
+  s200 ep11 train=34.228 val=38.481 (bad=6, 8s)
+  s200 ep12 train=38.850 val=39.499 (bad=7, 9s)
+  s200 ep13 train=34.480 val=37.869 (bad=8, 10s)
+  s200 ep14 train=35.694 val=37.202 *best (bad=0, 11s)
+  s200 ep15 train=36.328 val=38.369 (bad=1, 11s)
+  s200 ep16 train=34.637 val=39.310 (bad=2, 12s)
+  s200 ep17 train=34.038 val=37.630 (bad=3, 13s)
+  s200 ep18 train=32.972 val=38.362 (bad=4, 14s)
+  s200 ep19 train=32.294 val=39.675 (bad=5, 15s)
+  s200 ep20 train=35.290 val=38.510 (bad=6, 15s)
+  s200 ep21 train=36.074 val=38.554 (bad=7, 16s)
+  s200 ep22 train=34.628 val=39.141 (bad=8, 17s)
+  s200 ep23 train=31.928 val=38.968 (bad=9, 18s)
+  s200 ep24 train=31.835 val=38.522 (bad=10, 18s)
+  s200 ep25 train=33.575 val=39.396 (bad=11, 19s)
+  s200 ep26 train=31.068 val=38.871 (bad=12, 20s)
+  s200 stop @ep26 best=37.202
+seed2 fold1 [train] trn=618 val=155
+  s201 ep1 train=46.393 val=41.121 *best (bad=0, 1s)
+  s201 ep2 train=40.047 val=40.902 *best (bad=0, 2s)
+  s201 ep3 train=37.681 val=39.210 *best (bad=0, 2s)
+  s201 ep4 train=37.084 val=43.046 (bad=1, 3s)
+  s201 ep5 train=38.455 val=38.766 *best (bad=0, 4s)
+  s201 ep6 train=39.193 val=41.649 (bad=1, 5s)
+  s201 ep7 train=37.523 val=41.212 (bad=2, 5s)
+  s201 ep8 train=37.429 val=40.809 (bad=3, 6s)
+  s201 ep9 train=35.691 val=38.566 *best (bad=0, 7s)
+  s201 ep10 train=35.467 val=37.806 *best (bad=0, 8s)
+  s201 ep11 train=34.614 val=39.963 (bad=1, 8s)
+  s201 ep12 train=36.050 val=39.406 (bad=2, 9s)
+  s201 ep13 train=33.823 val=39.744 (bad=3, 10s)
+  s201 ep14 train=36.065 val=40.370 (bad=4, 11s)
+  s201 ep15 train=33.566 val=39.992 (bad=5, 11s)
+  s201 ep16 train=35.407 val=39.291 (bad=6, 12s)
+  s201 ep17 train=32.613 val=38.103 (bad=7, 13s)
+  s201 ep18 train=31.412 val=39.644 (bad=8, 14s)
+  s201 ep19 train=30.858 val=38.720 (bad=9, 14s)
+  s201 ep20 train=30.733 val=39.817 (bad=10, 15s)
+  s201 ep21 train=29.606 val=39.835 (bad=11, 16s)
+  s201 ep22 train=29.215 val=39.214 (bad=12, 17s)
+  s201 stop @ep22 best=37.806
+seed2 fold2 [train] trn=619 val=154
+  s202 ep1 train=44.363 val=30.862 *best (bad=0, 1s)
+  s202 ep2 train=45.476 val=28.665 *best (bad=0, 2s)
+  s202 ep3 train=41.114 val=31.545 (bad=1, 2s)
+  s202 ep4 train=40.507 val=31.048 (bad=2, 3s)
+  s202 ep5 train=40.090 val=31.730 (bad=3, 4s)
+  s202 ep6 train=40.245 val=32.263 (bad=4, 5s)
+  s202 ep7 train=37.278 val=29.236 (bad=5, 5s)
+  s202 ep8 train=38.385 val=33.719 (bad=6, 6s)
+  s202 ep9 train=34.385 val=28.091 *best (bad=0, 7s)
+  s202 ep10 train=35.793 val=27.803 *best (bad=0, 8s)
+  s202 ep11 train=33.143 val=29.657 (bad=1, 8s)
+  s202 ep12 train=35.322 val=31.388 (bad=2, 9s)
+  s202 ep13 train=33.262 val=27.963 (bad=3, 10s)
+  s202 ep14 train=34.505 val=28.565 (bad=4, 11s)
+  s202 ep15 train=31.819 val=32.959 (bad=5, 11s)
+  s202 ep16 train=33.333 val=30.626 (bad=6, 12s)
+  s202 ep17 train=33.545 val=29.141 (bad=7, 13s)
+  s202 ep18 train=31.270 val=28.131 (bad=8, 14s)
+  s202 ep19 train=33.565 val=36.052 (bad=9, 15s)
+  s202 ep20 train=30.566 val=28.240 (bad=10, 15s)
+  s202 ep21 train=34.249 val=29.509 (bad=11, 16s)
+  s202 ep22 train=31.845 val=29.457 (bad=12, 17s)
+  s202 stop @ep22 best=27.803
+seed2 fold3 [train] trn=618 val=155
+  s203 ep1 train=43.042 val=34.158 *best (bad=0, 1s)
+  s203 ep2 train=41.380 val=35.437 (bad=1, 2s)
+  s203 ep3 train=41.704 val=35.749 (bad=2, 2s)
+  s203 ep4 train=40.838 val=36.491 (bad=3, 3s)
+  s203 ep5 train=43.152 val=35.805 (bad=4, 4s)
+  s203 ep6 train=37.441 val=34.282 (bad=5, 5s)
+  s203 ep7 train=38.111 val=33.591 *best (bad=0, 5s)
+  s203 ep8 train=35.998 val=34.974 (bad=1, 6s)
+  s203 ep9 train=36.797 val=34.439 (bad=2, 7s)
+  s203 ep10 train=35.372 val=33.227 *best (bad=0, 8s)
+  s203 ep11 train=36.738 val=40.132 (bad=1, 8s)
+  s203 ep12 train=34.171 val=32.981 *best (bad=0, 9s)
+  s203 ep13 train=34.037 val=34.013 (bad=1, 10s)
+  s203 ep14 train=36.526 val=32.713 *best (bad=0, 11s)
+  s203 ep15 train=33.760 val=32.382 *best (bad=0, 11s)
+  s203 ep16 train=34.016 val=33.960 (bad=1, 12s)
+  s203 ep17 train=32.648 val=34.563 (bad=2, 13s)
+  s203 ep18 train=33.621 val=32.387 (bad=3, 14s)
+  s203 ep19 train=34.043 val=32.160 *best (bad=0, 14s)
+  s203 ep20 train=33.103 val=33.005 (bad=1, 15s)
+  s203 ep21 train=35.499 val=31.974 *best (bad=0, 16s)
+  s203 ep22 train=33.526 val=32.853 (bad=1, 17s)
+  s203 ep23 train=31.429 val=32.765 (bad=2, 17s)
+  s203 ep24 train=32.298 val=33.490 (bad=3, 18s)
+  s203 ep25 train=43.282 val=31.990 (bad=4, 19s)
+  s203 ep26 train=31.095 val=33.536 (bad=5, 20s)
+  s203 ep27 train=30.958 val=33.107 (bad=6, 20s)
+  s203 ep28 train=30.970 val=33.262 (bad=7, 21s)
+  s203 ep29 train=29.588 val=33.162 (bad=8, 22s)
+  s203 ep30 train=31.951 val=33.954 (bad=9, 23s)
+  s203 ep31 train=30.358 val=32.343 (bad=10, 24s)
+  s203 ep32 train=30.305 val=32.933 (bad=11, 24s)
+  s203 ep33 train=29.246 val=31.911 *best (bad=0, 25s)
+  s203 ep34 train=29.234 val=32.254 (bad=1, 26s)
+  s203 ep35 train=29.861 val=32.458 (bad=2, 27s)
+  s203 ep36 train=29.205 val=31.928 (bad=3, 27s)
+  s203 ep37 train=29.373 val=33.565 (bad=4, 28s)
+  s203 ep38 train=29.584 val=32.766 (bad=5, 29s)
+  s203 ep39 train=28.235 val=32.555 (bad=6, 30s)
+  s203 ep40 train=28.287 val=32.695 (bad=7, 30s)
+  s203 ep41 train=28.772 val=32.167 (bad=8, 31s)
+  s203 ep42 train=28.812 val=32.475 (bad=9, 32s)
+  s203 ep43 train=28.396 val=32.366 (bad=10, 33s)
+  s203 ep44 train=28.284 val=32.496 (bad=11, 33s)
+  s203 ep45 train=28.029 val=32.302 (bad=12, 34s)
+  s203 stop @ep45 best=31.911
+seed2 fold4 [train] trn=619 val=154
+  s204 ep1 train=41.712 val=47.907 *best (bad=0, 1s)
+  s204 ep2 train=37.212 val=48.688 (bad=1, 2s)
+  s204 ep3 train=36.497 val=47.036 *best (bad=0, 2s)
+  s204 ep4 train=34.988 val=46.803 *best (bad=0, 3s)
+  s204 ep5 train=34.733 val=45.582 *best (bad=0, 4s)
+  s204 ep6 train=34.664 val=47.129 (bad=1, 5s)
+  s204 ep7 train=35.291 val=48.773 (bad=2, 5s)
+  s204 ep8 train=34.594 val=47.822 (bad=3, 6s)
+  s204 ep9 train=33.875 val=47.420 (bad=4, 7s)
+  s204 ep10 train=34.477 val=44.879 *best (bad=0, 8s)
+  s204 ep11 train=35.025 val=45.769 (bad=1, 8s)
+  s204 ep12 train=33.393 val=43.124 *best (bad=0, 9s)
+  s204 ep13 train=31.864 val=44.417 (bad=1, 10s)
+  s204 ep14 train=31.657 val=44.136 (bad=2, 11s)
+  s204 ep15 train=33.156 val=43.880 (bad=3, 11s)
+  s204 ep16 train=32.601 val=42.457 *best (bad=0, 12s)
+  s204 ep17 train=30.974 val=40.831 *best (bad=0, 13s)
+  s204 ep18 train=30.754 val=41.439 (bad=1, 14s)
+  s204 ep19 train=30.307 val=45.040 (bad=2, 14s)
+  s204 ep20 train=31.282 val=43.055 (bad=3, 15s)
+  s204 ep21 train=30.012 val=41.398 (bad=4, 16s)
+  s204 ep22 train=28.812 val=41.891 (bad=5, 17s)
+  s204 ep23 train=28.191 val=41.674 (bad=6, 17s)
+  s204 ep24 train=28.035 val=43.751 (bad=7, 18s)
+  s204 ep25 train=28.202 val=40.826 *best (bad=0, 19s)
+  s204 ep26 train=27.265 val=41.670 (bad=1, 20s)
+  s204 ep27 train=27.601 val=40.325 *best (bad=0, 21s)
+  s204 ep28 train=27.244 val=40.815 (bad=1, 21s)
+  s204 ep29 train=28.455 val=41.151 (bad=2, 22s)
+  s204 ep30 train=27.608 val=41.716 (bad=3, 23s)
+  s204 ep31 train=27.408 val=42.443 (bad=4, 24s)
+  s204 ep32 train=27.290 val=40.125 *best (bad=0, 24s)
+  s204 ep33 train=26.840 val=40.633 (bad=1, 25s)
+  s204 ep34 train=26.401 val=40.807 (bad=2, 26s)
+  s204 ep35 train=26.362 val=40.962 (bad=3, 27s)
+  s204 ep36 train=26.117 val=39.741 *best (bad=0, 27s)
+  s204 ep37 train=26.782 val=40.647 (bad=1, 28s)
+  s204 ep38 train=26.241 val=39.601 *best (bad=0, 29s)
+  s204 ep39 train=26.024 val=40.646 (bad=1, 30s)
+  s204 ep40 train=26.180 val=43.111 (bad=2, 30s)
+  s204 ep41 train=26.265 val=41.056 (bad=3, 31s)
+  s204 ep42 train=26.110 val=40.981 (bad=4, 32s)
+  s204 ep43 train=25.285 val=41.498 (bad=5, 33s)
+  s204 ep44 train=24.939 val=42.579 (bad=6, 33s)
+  s204 ep45 train=24.924 val=40.294 (bad=7, 34s)
+  s204 ep46 train=24.507 val=43.367 (bad=8, 35s)
+  s204 ep47 train=24.347 val=40.890 (bad=9, 36s)
+  s204 ep48 train=24.733 val=40.447 (bad=10, 36s)
+  s204 ep49 train=24.355 val=41.048 (bad=11, 37s)
+  s204 ep50 train=24.072 val=39.776 (bad=12, 38s)
+  s204 stop @ep50 best=39.601
+== seed2 OOF per-row(target) RMSE = 6.0153  (filled 3783989/3783989)
+seed3 fold0 [train] trn=618 val=155
+  s300 ep1 train=43.104 val=43.823 *best (bad=0, 1s)
+  s300 ep2 train=39.268 val=44.849 (bad=1, 2s)
+  s300 ep3 train=38.755 val=38.981 *best (bad=0, 2s)
+  s300 ep4 train=40.703 val=40.082 (bad=1, 3s)
+  s300 ep5 train=37.341 val=38.733 *best (bad=0, 4s)
+  s300 ep6 train=37.671 val=44.297 (bad=1, 5s)
+  s300 ep7 train=36.972 val=38.966 (bad=2, 5s)
+  s300 ep8 train=36.803 val=37.332 *best (bad=0, 6s)
+  s300 ep9 train=41.041 val=41.920 (bad=1, 7s)
+  s300 ep10 train=36.717 val=39.522 (bad=2, 8s)
+  s300 ep11 train=35.938 val=37.315 *best (bad=0, 8s)
+  s300 ep12 train=36.372 val=37.497 (bad=1, 9s)
+  s300 ep13 train=34.652 val=40.288 (bad=2, 10s)
+  s300 ep14 train=34.642 val=38.566 (bad=3, 11s)
+  s300 ep15 train=37.236 val=37.347 (bad=4, 11s)
+  s300 ep16 train=33.103 val=36.888 *best (bad=0, 12s)
+  s300 ep17 train=36.999 val=40.907 (bad=1, 13s)
+  s300 ep18 train=33.702 val=39.406 (bad=2, 14s)
+  s300 ep19 train=33.278 val=39.669 (bad=3, 14s)
+  s300 ep20 train=34.171 val=39.624 (bad=4, 15s)
+  s300 ep21 train=31.859 val=37.757 (bad=5, 16s)
+  s300 ep22 train=29.715 val=40.030 (bad=6, 17s)
+  s300 ep23 train=29.787 val=39.794 (bad=7, 17s)
+  s300 ep24 train=27.974 val=39.868 (bad=8, 18s)
+  s300 ep25 train=27.427 val=40.191 (bad=9, 19s)
+  s300 ep26 train=29.565 val=38.586 (bad=10, 20s)
+  s300 ep27 train=30.708 val=39.144 (bad=11, 21s)
+  s300 ep28 train=26.398 val=39.158 (bad=12, 21s)
+  s300 stop @ep28 best=36.888
+seed3 fold1 [train] trn=618 val=155
+  s301 ep1 train=43.586 val=41.150 *best (bad=0, 1s)
+  s301 ep2 train=43.548 val=39.751 *best (bad=0, 2s)
+  s301 ep3 train=40.868 val=39.777 (bad=1, 2s)
+  s301 ep4 train=36.666 val=38.818 *best (bad=0, 3s)
+  s301 ep5 train=37.879 val=36.603 *best (bad=0, 4s)
+  s301 ep6 train=36.840 val=37.296 (bad=1, 5s)
+  s301 ep7 train=37.030 val=37.229 (bad=2, 5s)
+  s301 ep8 train=38.205 val=37.253 (bad=3, 6s)
+  s301 ep9 train=35.977 val=40.569 (bad=4, 7s)
+  s301 ep10 train=34.564 val=42.737 (bad=5, 8s)
+  s301 ep11 train=32.679 val=38.595 (bad=6, 8s)
+  s301 ep12 train=33.047 val=37.835 (bad=7, 9s)
+  s301 ep13 train=35.091 val=37.955 (bad=8, 10s)
+  s301 ep14 train=33.902 val=39.201 (bad=9, 11s)
+  s301 ep15 train=33.322 val=40.011 (bad=10, 11s)
+  s301 ep16 train=32.766 val=40.480 (bad=11, 12s)
+  s301 ep17 train=30.750 val=38.677 (bad=12, 13s)
+  s301 stop @ep17 best=36.603
+seed3 fold2 [train] trn=619 val=154
+  s302 ep1 train=43.956 val=30.660 *best (bad=0, 1s)
+  s302 ep2 train=42.724 val=29.259 *best (bad=0, 2s)
+  s302 ep3 train=58.788 val=30.620 (bad=1, 2s)
+  s302 ep4 train=40.431 val=28.256 *best (bad=0, 3s)
+  s302 ep5 train=36.920 val=33.002 (bad=1, 4s)
+  s302 ep6 train=37.828 val=28.606 (bad=2, 5s)
+  s302 ep7 train=38.989 val=30.446 (bad=3, 5s)
+  s302 ep8 train=38.764 val=29.653 (bad=4, 6s)
+  s302 ep9 train=38.183 val=31.054 (bad=5, 7s)
+  s302 ep10 train=37.047 val=31.382 (bad=6, 8s)
+  s302 ep11 train=34.568 val=30.857 (bad=7, 8s)
+  s302 ep12 train=34.499 val=29.283 (bad=8, 9s)
+  s302 ep13 train=35.289 val=29.903 (bad=9, 10s)
+  s302 ep14 train=34.133 val=30.536 (bad=10, 11s)
+  s302 ep15 train=33.208 val=31.178 (bad=11, 11s)
+  s302 ep16 train=33.260 val=31.620 (bad=12, 12s)
+  s302 stop @ep16 best=28.256
+seed3 fold3 [train] trn=618 val=155
+  s303 ep1 train=42.702 val=35.381 *best (bad=0, 1s)
+  s303 ep2 train=44.199 val=35.663 (bad=1, 2s)
+  s303 ep3 train=41.266 val=35.373 *best (bad=0, 2s)
+  s303 ep4 train=43.675 val=32.274 *best (bad=0, 3s)
+  s303 ep5 train=40.152 val=32.582 (bad=1, 4s)
+  s303 ep6 train=38.893 val=30.242 *best (bad=0, 5s)
+  s303 ep7 train=39.980 val=30.779 (bad=1, 5s)
+  s303 ep8 train=38.517 val=33.294 (bad=2, 6s)
+  s303 ep9 train=34.928 val=30.102 *best (bad=0, 7s)
+  s303 ep10 train=35.602 val=34.055 (bad=1, 8s)
+  s303 ep11 train=34.769 val=35.957 (bad=2, 8s)
+  s303 ep12 train=37.825 val=32.037 (bad=3, 9s)
+  s303 ep13 train=35.694 val=32.325 (bad=4, 10s)
+  s303 ep14 train=34.505 val=31.885 (bad=5, 11s)
+  s303 ep15 train=34.364 val=32.058 (bad=6, 11s)
+  s303 ep16 train=34.134 val=34.576 (bad=7, 12s)
+  s303 ep17 train=34.161 val=32.182 (bad=8, 13s)
+  s303 ep18 train=31.968 val=31.808 (bad=9, 14s)
+  s303 ep19 train=32.148 val=35.500 (bad=10, 14s)
+  s303 ep20 train=33.891 val=33.674 (bad=11, 15s)
+  s303 ep21 train=31.767 val=35.100 (bad=12, 16s)
+  s303 stop @ep21 best=30.102
+seed3 fold4 [train] trn=619 val=154
+  s304 ep1 train=37.363 val=47.637 *best (bad=0, 1s)
+  s304 ep2 train=36.266 val=47.536 *best (bad=0, 2s)
+  s304 ep3 train=35.684 val=46.227 *best (bad=0, 2s)
+  s304 ep4 train=34.751 val=44.592 *best (bad=0, 3s)
+  s304 ep5 train=34.316 val=44.368 *best (bad=0, 4s)
+  s304 ep6 train=33.589 val=45.542 (bad=1, 5s)
+  s304 ep7 train=33.765 val=46.376 (bad=2, 5s)
+  s304 ep8 train=34.026 val=42.809 *best (bad=0, 6s)
+  s304 ep9 train=34.280 val=53.999 (bad=1, 7s)
+  s304 ep10 train=33.844 val=43.996 (bad=2, 8s)
+  s304 ep11 train=32.464 val=44.338 (bad=3, 8s)
+  s304 ep12 train=31.078 val=42.514 *best (bad=0, 9s)
+  s304 ep13 train=31.840 val=44.502 (bad=1, 10s)
+  s304 ep14 train=32.172 val=43.387 (bad=2, 11s)
+  s304 ep15 train=30.721 val=42.607 (bad=3, 11s)
+  s304 ep16 train=29.755 val=43.675 (bad=4, 12s)
+  s304 ep17 train=30.420 val=40.695 *best (bad=0, 13s)
+  s304 ep18 train=29.417 val=44.338 (bad=1, 14s)
+  s304 ep19 train=29.199 val=45.553 (bad=2, 14s)
+  s304 ep20 train=30.192 val=46.006 (bad=3, 15s)
+  s304 ep21 train=28.277 val=41.412 (bad=4, 16s)
+  s304 ep22 train=28.471 val=43.279 (bad=5, 17s)
+  s304 ep23 train=27.346 val=38.178 *best (bad=0, 18s)
+  s304 ep24 train=28.051 val=38.958 (bad=1, 18s)
+  s304 ep25 train=26.999 val=40.681 (bad=2, 19s)
+  s304 ep26 train=27.277 val=39.086 (bad=3, 20s)
+  s304 ep27 train=26.996 val=37.182 *best (bad=0, 21s)
+  s304 ep28 train=26.272 val=38.228 (bad=1, 21s)
+  s304 ep29 train=26.044 val=38.109 (bad=2, 22s)
+  s304 ep30 train=26.979 val=37.232 (bad=3, 23s)
+  s304 ep31 train=25.844 val=38.723 (bad=4, 24s)
+  s304 ep32 train=25.782 val=38.088 (bad=5, 24s)
+  s304 ep33 train=25.824 val=37.260 (bad=6, 25s)
+  s304 ep34 train=25.625 val=38.677 (bad=7, 26s)
+  s304 ep35 train=25.193 val=39.762 (bad=8, 27s)
+  s304 ep36 train=25.569 val=38.603 (bad=9, 28s)
+  s304 ep37 train=25.201 val=37.525 (bad=10, 28s)
+  s304 ep38 train=24.888 val=37.901 (bad=11, 29s)
+  s304 ep39 train=24.655 val=37.478 (bad=12, 30s)
+  s304 stop @ep39 best=37.182
+== seed3 OOF per-row(target) RMSE = 5.9261  (filled 3783989/3783989)
+seed4 fold0 [train] trn=618 val=155
+  s400 ep1 train=40.625 val=43.240 *best (bad=0, 1s)
+  s400 ep2 train=38.014 val=46.526 (bad=1, 2s)
+  s400 ep3 train=37.964 val=43.799 (bad=2, 2s)
+  s400 ep4 train=41.555 val=38.427 *best (bad=0, 3s)
+  s400 ep5 train=38.592 val=40.044 (bad=1, 4s)
+  s400 ep6 train=37.910 val=38.111 *best (bad=0, 5s)
+  s400 ep7 train=40.591 val=43.607 (bad=1, 5s)
+  s400 ep8 train=37.909 val=38.919 (bad=2, 6s)
+  s400 ep9 train=39.750 val=40.737 (bad=3, 7s)
+  s400 ep10 train=36.184 val=41.168 (bad=4, 8s)
+  s400 ep11 train=34.098 val=37.857 *best (bad=0, 8s)
+  s400 ep12 train=35.000 val=39.981 (bad=1, 9s)
+  s400 ep13 train=35.349 val=76.225 (bad=2, 10s)
+  s400 ep14 train=34.248 val=41.489 (bad=3, 11s)
+  s400 ep15 train=35.468 val=37.853 *best (bad=0, 11s)
+  s400 ep16 train=36.423 val=38.225 (bad=1, 12s)
+  s400 ep17 train=33.632 val=39.235 (bad=2, 13s)
+  s400 ep18 train=32.872 val=37.144 *best (bad=0, 14s)
+  s400 ep19 train=34.200 val=38.243 (bad=1, 14s)
+  s400 ep20 train=34.272 val=36.231 *best (bad=0, 15s)
+  s400 ep21 train=32.383 val=35.167 *best (bad=0, 16s)
+  s400 ep22 train=32.299 val=36.418 (bad=1, 17s)
+  s400 ep23 train=31.894 val=34.638 *best (bad=0, 17s)
+  s400 ep24 train=31.105 val=41.089 (bad=1, 18s)
+  s400 ep25 train=35.102 val=39.816 (bad=2, 19s)
+  s400 ep26 train=31.848 val=40.047 (bad=3, 20s)
+  s400 ep27 train=30.288 val=39.287 (bad=4, 21s)
+  s400 ep28 train=29.390 val=37.715 (bad=5, 21s)
+  s400 ep29 train=28.165 val=38.365 (bad=6, 22s)
+  s400 ep30 train=27.888 val=40.211 (bad=7, 23s)
+  s400 ep31 train=28.745 val=40.408 (bad=8, 24s)
+  s400 ep32 train=28.059 val=37.134 (bad=9, 24s)
+  s400 ep33 train=26.827 val=41.168 (bad=10, 25s)
+  s400 ep34 train=27.418 val=37.374 (bad=11, 26s)
+  s400 ep35 train=26.539 val=38.042 (bad=12, 27s)
+  s400 stop @ep35 best=34.638
+seed4 fold1 [train] trn=618 val=155
+  s401 ep1 train=42.966 val=39.994 *best (bad=0, 1s)
+  s401 ep2 train=43.440 val=40.391 (bad=1, 2s)
+  s401 ep3 train=40.806 val=39.843 *best (bad=0, 2s)
+  s401 ep4 train=42.667 val=41.495 (bad=1, 3s)
+  s401 ep5 train=37.375 val=40.025 (bad=2, 4s)
+  s401 ep6 train=36.714 val=38.541 *best (bad=0, 5s)
+  s401 ep7 train=36.060 val=39.298 (bad=1, 5s)
+  s401 ep8 train=40.820 val=39.264 (bad=2, 6s)
+  s401 ep9 train=35.396 val=37.449 *best (bad=0, 7s)
+  s401 ep10 train=37.040 val=37.853 (bad=1, 8s)
+  s401 ep11 train=36.447 val=37.780 (bad=2, 8s)
+  s401 ep12 train=33.650 val=37.161 *best (bad=0, 9s)
+  s401 ep13 train=32.824 val=40.148 (bad=1, 10s)
+  s401 ep14 train=32.460 val=39.825 (bad=2, 11s)
+  s401 ep15 train=32.656 val=37.244 (bad=3, 11s)
+  s401 ep16 train=32.591 val=37.975 (bad=4, 12s)
+  s401 ep17 train=32.378 val=37.495 (bad=5, 13s)
+  s401 ep18 train=30.114 val=38.765 (bad=6, 14s)
+  s401 ep19 train=29.567 val=37.794 (bad=7, 14s)
+  s401 ep20 train=30.251 val=37.929 (bad=8, 15s)
+  s401 ep21 train=30.572 val=38.101 (bad=9, 16s)
+  s401 ep22 train=28.712 val=38.772 (bad=10, 17s)
+  s401 ep23 train=36.835 val=37.699 (bad=11, 18s)
+  s401 ep24 train=30.193 val=38.004 (bad=12, 18s)
+  s401 stop @ep24 best=37.161
+seed4 fold2 [train] trn=619 val=154
+  s402 ep1 train=43.904 val=32.499 *best (bad=0, 1s)
+  s402 ep2 train=44.099 val=31.176 *best (bad=0, 2s)
+  s402 ep3 train=43.119 val=32.537 (bad=1, 2s)
+  s402 ep4 train=41.545 val=29.906 *best (bad=0, 3s)
+  s402 ep5 train=41.384 val=30.453 (bad=1, 4s)
+  s402 ep6 train=38.906 val=30.235 (bad=2, 5s)
+  s402 ep7 train=38.358 val=29.441 *best (bad=0, 5s)
+  s402 ep8 train=40.536 val=30.715 (bad=1, 6s)
+  s402 ep9 train=36.012 val=38.462 (bad=2, 7s)
+  s402 ep10 train=37.190 val=28.686 *best (bad=0, 8s)
+  s402 ep11 train=53.198 val=28.746 (bad=1, 8s)
+  s402 ep12 train=37.007 val=31.739 (bad=2, 9s)
+  s402 ep13 train=36.785 val=30.903 (bad=3, 10s)
+  s402 ep14 train=34.648 val=29.177 (bad=4, 11s)
+  s402 ep15 train=39.180 val=33.884 (bad=5, 11s)
+  s402 ep16 train=34.243 val=31.606 (bad=6, 12s)
+  s402 ep17 train=32.375 val=31.324 (bad=7, 13s)
+  s402 ep18 train=33.612 val=32.866 (bad=8, 14s)
+  s402 ep19 train=32.692 val=30.900 (bad=9, 15s)
+  s402 ep20 train=31.841 val=31.054 (bad=10, 15s)
+  s402 ep21 train=32.298 val=30.881 (bad=11, 16s)
+  s402 ep22 train=33.012 val=30.808 (bad=12, 17s)
+  s402 stop @ep22 best=28.686
+seed4 fold3 [train] trn=618 val=155
+  s403 ep1 train=44.469 val=37.700 *best (bad=0, 1s)
+  s403 ep2 train=43.278 val=34.547 *best (bad=0, 2s)
+  s403 ep3 train=38.707 val=35.375 (bad=1, 2s)
+  s403 ep4 train=38.522 val=31.903 *best (bad=0, 3s)
+  s403 ep5 train=38.410 val=33.601 (bad=1, 4s)
+  s403 ep6 train=39.928 val=32.106 (bad=2, 5s)
+  s403 ep7 train=36.976 val=31.703 *best (bad=0, 5s)
+  s403 ep8 train=38.488 val=36.283 (bad=1, 6s)
+  s403 ep9 train=37.823 val=37.864 (bad=2, 7s)
+  s403 ep10 train=34.927 val=31.332 *best (bad=0, 8s)
+  s403 ep11 train=36.169 val=31.396 (bad=1, 8s)
+  s403 ep12 train=35.439 val=33.025 (bad=2, 9s)
+  s403 ep13 train=34.992 val=33.184 (bad=3, 10s)
+  s403 ep14 train=33.134 val=31.105 *best (bad=0, 11s)
+  s403 ep15 train=33.901 val=33.642 (bad=1, 11s)
+  s403 ep16 train=34.361 val=31.678 (bad=2, 12s)
+  s403 ep17 train=32.137 val=32.011 (bad=3, 13s)
+  s403 ep18 train=34.978 val=32.485 (bad=4, 14s)
+  s403 ep19 train=32.404 val=31.472 (bad=5, 14s)
+  s403 ep20 train=32.257 val=32.624 (bad=6, 15s)
+  s403 ep21 train=29.978 val=33.937 (bad=7, 16s)
+  s403 ep22 train=31.251 val=31.938 (bad=8, 17s)
+  s403 ep23 train=31.749 val=34.174 (bad=9, 18s)
+  s403 ep24 train=30.956 val=34.486 (bad=10, 18s)
+  s403 ep25 train=30.692 val=33.380 (bad=11, 19s)
+  s403 ep26 train=30.217 val=34.148 (bad=12, 20s)
+  s403 stop @ep26 best=31.105
+seed4 fold4 [train] trn=619 val=154
+  s404 ep1 train=37.278 val=48.923 *best (bad=0, 1s)
+  s404 ep2 train=36.660 val=48.289 *best (bad=0, 2s)
+  s404 ep3 train=37.177 val=47.756 *best (bad=0, 2s)
+  s404 ep4 train=39.280 val=48.023 (bad=1, 3s)
+  s404 ep5 train=35.991 val=45.891 *best (bad=0, 4s)
+  s404 ep6 train=35.081 val=44.856 *best (bad=0, 5s)
+  s404 ep7 train=34.716 val=43.487 *best (bad=0, 5s)
+  s404 ep8 train=34.568 val=43.875 (bad=1, 6s)
+  s404 ep9 train=32.454 val=44.501 (bad=2, 7s)
+  s404 ep10 train=33.574 val=43.821 (bad=3, 8s)
+  s404 ep11 train=32.397 val=43.940 (bad=4, 8s)
+  s404 ep12 train=32.822 val=42.814 *best (bad=0, 9s)
+  s404 ep13 train=32.568 val=43.104 (bad=1, 10s)
+  s404 ep14 train=32.936 val=43.705 (bad=2, 11s)
+  s404 ep15 train=32.130 val=42.108 *best (bad=0, 11s)
+  s404 ep16 train=31.239 val=44.031 (bad=1, 12s)
+  s404 ep17 train=30.969 val=39.103 *best (bad=0, 13s)
+  s404 ep18 train=30.405 val=41.446 (bad=1, 14s)
+  s404 ep19 train=29.961 val=43.931 (bad=2, 15s)
+  s404 ep20 train=30.029 val=42.721 (bad=3, 15s)
+  s404 ep21 train=29.488 val=42.963 (bad=4, 16s)
+  s404 ep22 train=31.491 val=40.082 (bad=5, 17s)
+  s404 ep23 train=29.556 val=39.874 (bad=6, 18s)
+  s404 ep24 train=28.915 val=40.228 (bad=7, 18s)
+  s404 ep25 train=29.411 val=40.390 (bad=8, 19s)
+  s404 ep26 train=29.048 val=39.074 *best (bad=0, 20s)
+  s404 ep27 train=27.814 val=40.688 (bad=1, 21s)
+  s404 ep28 train=28.356 val=39.498 (bad=2, 21s)
+  s404 ep29 train=27.759 val=40.435 (bad=3, 22s)
+  s404 ep30 train=27.221 val=40.647 (bad=4, 23s)
+  s404 ep31 train=28.477 val=39.075 (bad=5, 24s)
+  s404 ep32 train=27.042 val=39.693 (bad=6, 24s)
+  s404 ep33 train=26.698 val=39.429 (bad=7, 25s)
+  s404 ep34 train=27.311 val=38.323 *best (bad=0, 26s)
+  s404 ep35 train=26.356 val=38.991 (bad=1, 27s)
+  s404 ep36 train=26.667 val=38.641 (bad=2, 28s)
+  s404 ep37 train=25.886 val=38.839 (bad=3, 28s)
+  s404 ep38 train=26.296 val=39.152 (bad=4, 29s)
+  s404 ep39 train=26.673 val=39.627 (bad=5, 30s)
+  s404 ep40 train=25.817 val=38.752 (bad=6, 31s)
+  s404 ep41 train=25.391 val=38.308 *best (bad=0, 31s)
+  s404 ep42 train=25.668 val=38.059 *best (bad=0, 32s)
+  s404 ep43 train=25.310 val=38.097 (bad=1, 33s)
+  s404 ep44 train=25.722 val=37.935 *best (bad=0, 34s)
+  s404 ep45 train=25.481 val=38.253 (bad=1, 34s)
+  s404 ep46 train=25.414 val=37.859 *best (bad=0, 35s)
+  s404 ep47 train=25.652 val=37.943 (bad=1, 36s)
+  s404 ep48 train=25.358 val=37.912 (bad=2, 37s)
+  s404 ep49 train=25.937 val=38.237 (bad=3, 37s)
+  s404 ep50 train=25.471 val=38.165 (bad=4, 38s)
+  s404 ep51 train=25.538 val=38.236 (bad=5, 39s)
+  s404 ep52 train=25.133 val=38.191 (bad=6, 40s)
+  s404 ep53 train=24.960 val=37.879 (bad=7, 40s)
+  s404 ep54 train=25.469 val=37.747 *best (bad=0, 41s)
+  s404 ep55 train=24.910 val=37.790 (bad=1, 42s)
+  s404 ep56 train=24.524 val=37.872 (bad=2, 43s)
+  s404 ep57 train=24.710 val=37.724 *best (bad=0, 44s)
+  s404 ep58 train=25.275 val=37.802 (bad=1, 44s)
+  s404 ep59 train=24.963 val=37.911 (bad=2, 45s)
+  s404 ep60 train=24.729 val=37.871 (bad=3, 46s)
+  s404 ep61 train=24.692 val=37.726 (bad=4, 47s)
+  s404 ep62 train=25.157 val=37.781 (bad=5, 47s)
+  s404 ep63 train=25.506 val=37.868 (bad=6, 48s)
+  s404 ep64 train=24.757 val=37.793 (bad=7, 49s)
+  s404 ep65 train=24.431 val=37.800 (bad=8, 50s)
+  s404 ep66 train=24.545 val=37.863 (bad=9, 50s)
+  s404 ep67 train=24.799 val=37.987 (bad=10, 51s)
+  s404 ep68 train=24.377 val=37.928 (bad=11, 52s)
+  s404 ep69 train=24.697 val=37.902 (bad=12, 53s)
+  s404 stop @ep69 best=37.724
+== seed4 OOF per-row(target) RMSE = 5.9271  (filled 3783989/3783989)
+
+=== v93 L5 (struct-free segment-level leg) ===
+  seed0 OOF RMSE = 5.9199
+  seed1 OOF RMSE = 6.0103
+  seed2 OOF RMSE = 6.0153
+  seed3 OOF RMSE = 5.9261
+  seed4 OOF RMSE = 5.9271
+  5-seed ensemble OOF RMSE = 5.8631
+  saved C:\Users\kosaka256\Documents\rogii_claude\v98\artifacts_v98\l5_oof.npz  keys=['l5_s0', 'l5_s1', 'l5_s2', 'l5_s3', 'l5_s4', 'l5_mean', 'y']
+[blend] w_tcn=0.40 w_l5=0.60 OOF RMSE=5.7471 (TCN単体 6.0047 / L5単体 5.8631)
+
+[run_train_v98] 完了 (9227s)
+########## PIPELINE DONE 13:39 ##########

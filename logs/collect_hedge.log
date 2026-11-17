@@ -1,0 +1,10 @@
+  150 (115s)
+  300 (227s)
+  450 (341s)
+  600 (457s)
+  750 (571s)
+
+[全771井] v90=6.321 / r0snap=8.875 / GRsel=21.926
+  ★ヘッジoracle v90 vs r0snap = 5.493  (物理勝ち204井)
+  ★ヘッジoracle v90 vs GRsel  = 5.934
+  saved hedge_data_v91.pkl

@@ -1,0 +1,12 @@
+[v93 pf_banks] 錨=grfree_anchor_train.pkl 773井 / banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'] / smooth_lag=16
+[r0_seed32 60井 n_seed16 chunk40]
+  forward(lag0) = 7.6163
+  lag16         = 7.5666
+  lag192        = 7.1969  (=ユーザー実績: CV-0.3/LB-0.3 転移)
+  --- アンカー保持(lag192 を forward の ±band にクランプ) ---
+  anchor lag192 band=±5ft = 7.4811
+  anchor lag192 band=±10ft = 7.2734
+  anchor lag192 band=±20ft = 7.1982
+  anchor lag192 band=±40ft = 7.1969
+
+判定: lag192がforwardより良い=後ろ読み信号。anchorがその利得を保てば「datum固定・局所平滑」成立(=転移安全な形)。

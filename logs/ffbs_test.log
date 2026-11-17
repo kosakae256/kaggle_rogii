@@ -1,0 +1,4 @@
+[v93 pf_banks] 錨=grfree_anchor_train.pkl 773井 / banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'] / smooth_lag=16
+[r0_seed32 60井 n_seed16]
+  ①forward(lag0)      = 7.9672
+  ②normal(lag16)      = 7.9224

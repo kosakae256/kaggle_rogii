@@ -1,0 +1,7 @@
+origin別 全特徴数: {'base': 337, 'beam': 40, 'pf': 261, 'self': 38, 'nbr': 36, 'zgrad': 1}
+採用 713 列
+rows: fwd 3783989 + bwd 0 = 3783989 | features 713 | wells 773 | X 10.8 GB
+★v48 gf特徴 3列追加 → 計 716列
+variants: ['lightgbm-1', 'lightgbm-2', 'lightgbm-3', 'catboost-1', 'catboost-2', 'catboost-3', 'xgboost-1', 'xgboost-2', 'xgboost-3']
+lightgbm-1 fold0 [load]: rmse=6.6070
+lightgbm-1 fold1 [load]: rmse=6.9644

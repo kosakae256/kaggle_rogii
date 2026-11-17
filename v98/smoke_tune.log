@@ -1,0 +1,10 @@
+[v93] 錨prior=grfree_anchor_train.pkl  773井 (anchor_mult/ramp/on-off は P パラメータ)
+[v98 robust] IDX=1 robust_nu=5.0 temper_beta=0.85
+[v94 pf1] PHYS=off seed=3062970022 対象井=60 prior数=0 N_TRIALS=3 N_SEEDS=8 CORR_MAX=0.7 gs=[1.0,2.0] ★PF#1=相関制約なし
+  trial 1: best RMSE=37.1993 maxcorr=0.000 corrs=[] gs=1.238
+  trial 2: best RMSE=27.0632 maxcorr=0.000 corrs=[] gs=1.820
+  trial 3: best RMSE=27.0632 maxcorr=0.000 corrs=[] gs=1.820
+
+[v94 pf1] ★採用: RMSE=27.0632 maxcorr=0.000 PHYS=off -> v94_pf_1.json
+[v94 pf1] 採用PFを全井で走らせ誤差を保存中(pf_1_errs.pkl)...
+[v94 pf1] 全井誤差保存完了 773井 全井RMSE=31.6759 -> pf_1_errs.pkl

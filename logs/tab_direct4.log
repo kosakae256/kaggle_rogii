@@ -1,0 +1,72 @@
+origin別: {'base': 337, 'beam': 40, 'pf': 261, 'self': 38, 'nbr': 36, 'zgrad': 1}
+rows 3783989 | features 716 | wells 773 (fold毎ロード=フルX非常駐)
+variants: ['lightgbm-1', 'lightgbm-2', 'lightgbm-3', 'catboost-1', 'catboost-2', 'catboost-3', 'xgboost-1', 'xgboost-2', 'xgboost-3']
+[fold0] X_tr8.7GB X_va2.2GB load(51s)
+  lightgbm-1 fold0 [load]: rmse=6.6070
+  lightgbm-2 fold0 [load]: rmse=6.6345
+  lightgbm-3 fold0 [load]: rmse=6.5516
+  catboost-1 fold0 [load]: rmse=6.6234
+  catboost-2 fold0 [load]: rmse=6.6846
+  catboost-3 fold0 [load]: rmse=6.6452
+  xgboost-1 fold0 [load]: rmse=6.4966
+  xgboost-2 fold0 [load]: rmse=6.5649
+  xgboost-3 fold0 [load]: rmse=6.7030
+[fold1] X_tr8.7GB X_va2.2GB load(48s)
+  lightgbm-1 fold1 [load]: rmse=6.9644
+  lightgbm-2 fold1 [load]: rmse=6.9241
+  lightgbm-3 fold1 [load]: rmse=6.8803
+  catboost-1 fold1 [load]: rmse=7.1380
+  catboost-2 fold1 [load]: rmse=7.1730
+  catboost-3 fold1 [load]: rmse=7.1886
+  xgboost-1 fold1 [load]: rmse=6.9754
+  xgboost-2 fold1 [load]: rmse=6.9026
+  xgboost-3 fold1 [load]: rmse=6.9346
+[fold2] X_tr8.7GB X_va2.2GB load(49s)
+  lightgbm-1 fold2 [load]: rmse=6.3051
+  lightgbm-2 fold2 [load]: rmse=6.0608
+  lightgbm-3 fold2 [load]: rmse=6.1014
+  catboost-1 fold2 [load]: rmse=6.1475
+  catboost-2 fold2 [load]: rmse=6.1213
+  catboost-3 fold2 [load]: rmse=6.2525
+  xgboost-1 fold2 [load]: rmse=6.2391
+  xgboost-2 fold2 [load]: rmse=6.2962
+  xgboost-3 fold2 [load]: rmse=6.2096
+[fold3] X_tr8.7GB X_va2.2GB load(49s)
+  lightgbm-1 fold3 [load]: rmse=6.2686
+  lightgbm-2 fold3 [load]: rmse=6.1932
+  lightgbm-3 fold3 [load]: rmse=6.2227
+  catboost-1 fold3 [load]: rmse=6.4375
+  catboost-2 fold3 [load]: rmse=6.4689
+  catboost-3 fold3 [load]: rmse=6.3972
+  xgboost-1 fold3 [load]: rmse=6.2522
+  xgboost-2 fold3 [load]: rmse=6.2164
+  xgboost-3 fold3 [load]: rmse=6.3512
+[fold4] X_tr8.7GB X_va2.2GB load(48s)
+  lightgbm-1 fold4 [load]: rmse=7.0384
+  lightgbm-2 fold4 [load]: rmse=6.8866
+  lightgbm-3 fold4 [load]: rmse=7.0716
+  catboost-1 fold4 [load]: rmse=7.1541
+  catboost-2 fold4 [load]: rmse=7.2143
+  catboost-3 fold4 [load]: rmse=7.2360
+  xgboost-1 fold4 [load]: rmse=7.2182
+  xgboost-2 fold4 [load]: rmse=7.0483
+  xgboost-3 fold4 [load]: rmse=7.2319
+== lightgbm-1 OOF rmse=6.6444
+== lightgbm-2 OOF rmse=6.5494
+== lightgbm-3 OOF rmse=6.5759
+== catboost-1 OOF rmse=6.7117
+== catboost-2 OOF rmse=6.7453
+== catboost-3 OOF rmse=6.7559
+== xgboost-1 OOF rmse=6.6479
+== xgboost-2 OOF rmse=6.6137
+== xgboost-3 OOF rmse=6.6965
+=== OOF overall RMSE(全行プール=Kaggle指標) ===
+  raw(GBMアンサンブル) : 6.5695
+  + apply_pp           : 6.5736
+  ※ sg は per-well=submitで適用。CV↔LB は ±0.2 床込みで。
+★saved gbm_v41_oof.npy (TCN用)
+公平基準(旧v28GBM×NN, 同一行): 旧GBM単体 7.0409 / blend w_nn=0.60 -> 6.8699
+GBM(v36)単体+pp             : 6.5736
+blend GBM(v36)×NN           : w_nn=0.32 -> 6.4746  (Δ vs 基準 -0.3953)
+※ 行はROW_FRAC間引き後の同一行同士。全行の絶対値(6.8711等)とは僅かにずれるがΔは公平。
+saved: C:\Users\kosaka256\Documents\rogii_claude\v90\artifacts_v90\gbm_v41_oof.npy

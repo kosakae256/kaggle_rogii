@@ -1,0 +1,24 @@
+train坑井: 773
+使用坑井: 773
+
+=== 診断1: prefix TVTスパンによる eval被覆 ===
+  eval行のうち prefix TVT帯内の割合: 中央値=69.0%  平均=62.0%
+  eval帯が prefix帯から はみ出す割合(未被覆): 中央値=31.0%
+  prefix TVTスパン幅[ft]: 中央値=747.7  / eval TVTスパン幅: 中央値=26.4
+  被覆率<10%の坑井: 12.3%  / <50%: 35.8%
+
+=== 診断2: prefix-dip外挿誤差 vs eval距離(MAE ft) ===
+  距離   0-250ft (n= 192477): dip外挿MAE=  4.64  hold(dip0)MAE=  2.22  改善=-2.41
+  距離 250-500ft (n= 193158): dip外挿MAE= 13.78  hold(dip0)MAE=  5.43  改善=-8.35
+  距離  500-1kft (n= 385912): dip外挿MAE= 26.37  hold(dip0)MAE=  8.23  改善=-18.14
+  距離   1k-2kft (n= 770091): dip外挿MAE= 50.48  hold(dip0)MAE= 10.72  改善=-39.76
+  距離   2k-4kft (n=1419041): dip外挿MAE=100.38  hold(dip0)MAE= 12.63  改善=-87.75
+  距離     >4kft (n= 823310): dip外挿MAE=177.14  hold(dip0)MAE= 14.00  改善=-163.14
+
+=== 診断3: prefix affine較正 GR_well≈a·GR_tw+b ===
+  n=762  gain a: 中央値=0.852 [p10=0.698 p90=0.991]
+  offset b: 中央値=12.17 [p10=0.71 p90=25.33]
+  相関 corr(GR_well, GR_tw@prefix): 中央値=0.815 [p10=0.684]
+  較正後残差std: 中央値=12.93  (GR_wellのstd比で解釈)
+
+グラフ保存: C:\Users\kosaka256\Documents\rogii_claude\v100\prefix_diag\prefix_diag.png

@@ -1,0 +1,46 @@
+[v93 pf_banks] 錨=grfree_anchor_train.pkl 773井 / banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'] / smooth_lag=16
+device=cuda  PF=r0_seed32 (use_phys=False, use_anchor=False, N=400)  n_seed=32  N_BWD=128  TRANS_INFLATE=32.0
+usable wells: 20 / requested 20
+
+[lag192] v93 fixed-lag smoother (smooth_lag=192) ...
+[lag192] overall RMSE = 7.5597  (16s)
+
+[FFBSm] forward filter + real backward marginal smoother (per well) ...
+[1/20] 000d7d20 T=3836 | run fwd=7.106 ffbs=6.930 | 5s ETA 1.7m
+[2/20] 00bbac68 T=6014 | run fwd=6.033 ffbs=5.280 | 14s ETA 2.1m
+[3/20] 00e12e8b T=4301 | run fwd=7.523 ffbs=7.161 | 20s ETA 1.9m
+[4/20] 015fe0d2 T=4296 | run fwd=6.933 ffbs=6.520 | 26s ETA 1.7m
+[5/20] 01869cd4 T=5557 | run fwd=9.588 ffbs=8.906 | 34s ETA 1.7m
+[6/20] 01982c1d T=3941 | run fwd=9.082 ffbs=8.313 | 39s ETA 1.5m
+[7/20] 028d7b28 T=6234 | run fwd=9.719 ffbs=9.116 | 48s ETA 1.5m
+[8/20] 02e7fe5a T=5108 | run fwd=9.225 ffbs=8.594 | 55s ETA 1.4m
+[9/20] 0390d174 T=4411 | run fwd=8.786 ffbs=8.165 | 61s ETA 1.2m
+[10/20] 03a935ae T=2786 | run fwd=9.150 ffbs=8.549 | 65s ETA 1.1m
+[11/20] 044af7d1 T=4519 | run fwd=8.748 ffbs=8.168 | 71s ETA 1.0m
+[12/20] 0498acab T=4798 | run fwd=8.387 ffbs=7.825 | 78s ETA 0.9m
+[13/20] 052d64df T=2445 | run fwd=8.229 ffbs=7.689 | 81s ETA 0.7m
+[14/20] 05948241 T=3879 | run fwd=7.974 ffbs=7.448 | 87s ETA 0.6m
+[15/20] 059c8f24 T=6258 | run fwd=7.972 ffbs=7.311 | 95s ETA 0.5m
+[16/20] 05a0ee4d T=4348 | run fwd=7.926 ffbs=7.249 | 101s ETA 0.4m
+[17/20] 060ab2b8 T=6258 | run fwd=7.632 ffbs=6.990 | 110s ETA 0.3m
+[18/20] 06df5958 T=3509 | run fwd=7.534 ffbs=6.929 | 115s ETA 0.2m
+[19/20] 071d7b45 T=3211 | run fwd=7.402 ffbs=6.801 | 119s ETA 0.1m
+[20/20] 0849b4e2 T=5537 | run fwd=7.354 ffbs=6.617 | 127s ETA 0.0m
+
+============================================================
+RESULT  (r0_seed32, 20 wells minus skipped, n_seed=32, N_BWD=128, TRANS_INFLATE=32.0)
+============================================================
+  forward (blend=0)        = 7.3535
+  lag192 (fixed-lag proxy) = 7.5597   (dvs fwd +0.2062)
+  FFBSm-full (clamp=None)  = 6.6174   (dvs fwd -0.7361)
+  anchor-FFBSm band=+/-   5ft = 7.1827   (dvs fwd -0.1708)
+  anchor-FFBSm band=+/-  10ft = 6.8982   (dvs fwd -0.4553)
+  anchor-FFBSm band=+/-  20ft = 6.6174   (dvs fwd -0.7361)
+  anchor-FFBSm band=+/-  40ft = 6.6174   (dvs fwd -0.7361)
+============================================================
+  FFBSm-full beats forward? YES
+  FFBSm-full beats lag192?  YES
+  gain (fwd - ffbs)  = +0.7361
+  band=+/-40 retains 100% of the gain (>~80% => local, not datum-flip)
+  peak GPU mem = 1.90 GB
+  skipped wells: none

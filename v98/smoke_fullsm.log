@@ -1,0 +1,7 @@
+[v93 pf_banks] 錨=grfree_anchor_train.pkl 773井 / banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'] / smooth_lag=192
+[full-smoother test] bank=pf_1 lag_fix=192 n_seed=32 井=3 N=600 robust_nu=None temper_beta=None
+
+=== 結果(bank=pf_1, 3井 overall RMSE) ===
+  fixed-lag=192 : 6.9003
+  full平滑(全区間): 6.3588   (差 -0.5416)
+  => full が改善

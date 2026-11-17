@@ -1,0 +1,5 @@
+=== BETA=0 全fold0 23:30:28 ===
+[v90.0] guided PF (BETA=0.0) fold0 overall RMSE = 8.1342  (r0 fold0=8.03 と比較)
+=== BETA=0.3 全fold0 23:41:03 ===
+[v90.0] guided PF (BETA=0.3) fold0 overall RMSE = 11.2405  (r0 fold0=8.03 と比較)
+=== done 23:46:19 ===

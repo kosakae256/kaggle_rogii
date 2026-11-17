@@ -1,0 +1,41 @@
+=== BANK=p_1 W=0 01:51:20 ===
+[v90.0] guided PF (BETA=0.0) fold0 overall RMSE = 8.3956  (r0 fold0=8.03 と比較)
+=== BANK=p_1 W=0.005 01:53:15 ===
+[v90.0] guided PF (BETA=0.005) fold0 overall RMSE = 7.3343  (r0 fold0=8.03 と比較)
+=== BANK=p_1 W=0.01 01:55:41 ===
+[v90.0] guided PF (BETA=0.01) fold0 overall RMSE = 7.0318  (r0 fold0=8.03 と比較)
+=== BANK=p_1 W=0.02 01:58:00 ===
+[v90.0] guided PF (BETA=0.02) fold0 overall RMSE = 7.4164  (r0 fold0=8.03 と比較)
+=== BANK=p_2 W=0 02:00:22 ===
+[v90.0] guided PF (BETA=0.0) fold0 overall RMSE = 8.4581  (r0 fold0=8.03 と比較)
+=== BANK=p_2 W=0.005 02:02:14 ===
+[v90.0] guided PF (BETA=0.005) fold0 overall RMSE = 7.4719  (r0 fold0=8.03 と比較)
+=== BANK=p_2 W=0.01 02:04:21 ===
+[v90.0] guided PF (BETA=0.01) fold0 overall RMSE = 7.4640  (r0 fold0=8.03 と比較)
+=== BANK=p_2 W=0.02 02:05:53 ===
+[v90.0] guided PF (BETA=0.02) fold0 overall RMSE = 8.5926  (r0 fold0=8.03 と比較)
+=== BANK=p_3 W=0 02:07:24 ===
+[v90.0] guided PF (BETA=0.0) fold0 overall RMSE = 9.2748  (r0 fold0=8.03 と比較)
+=== BANK=p_3 W=0.005 02:08:35 ===
+[v90.0] guided PF (BETA=0.005) fold0 overall RMSE = 8.1508  (r0 fold0=8.03 と比較)
+=== BANK=p_3 W=0.01 02:10:03 ===
+[v90.0] guided PF (BETA=0.01) fold0 overall RMSE = 8.4776  (r0 fold0=8.03 と比較)
+=== BANK=p_3 W=0.02 02:11:31 ===
+[v90.0] guided PF (BETA=0.02) fold0 overall RMSE = 9.0230  (r0 fold0=8.03 と比較)
+=== BANK=p_4 W=0 02:12:59 ===
+[v90.0] guided PF (BETA=0.0) fold0 overall RMSE = 8.3144  (r0 fold0=8.03 と比較)
+=== BANK=p_4 W=0.005 02:14:07 ===
+[v90.0] guided PF (BETA=0.005) fold0 overall RMSE = 7.3999  (r0 fold0=8.03 と比較)
+=== BANK=p_4 W=0.01 02:15:32 ===
+[v90.0] guided PF (BETA=0.01) fold0 overall RMSE = 7.5000  (r0 fold0=8.03 と比較)
+=== BANK=p_4 W=0.02 02:16:57 ===
+[v90.0] guided PF (BETA=0.02) fold0 overall RMSE = 8.1152  (r0 fold0=8.03 と比較)
+=== BANK=p_5 W=0 02:18:22 ===
+[v90.0] guided PF (BETA=0.0) fold0 overall RMSE = 8.2566  (r0 fold0=8.03 と比較)
+=== BANK=p_5 W=0.005 02:19:28 ===
+[v90.0] guided PF (BETA=0.005) fold0 overall RMSE = 7.5354  (r0 fold0=8.03 と比較)
+=== BANK=p_5 W=0.01 02:20:53 ===
+[v90.0] guided PF (BETA=0.01) fold0 overall RMSE = 7.7763  (r0 fold0=8.03 と比較)
+=== BANK=p_5 W=0.02 02:22:17 ===
+[v90.0] guided PF (BETA=0.02) fold0 overall RMSE = 7.4858  (r0 fold0=8.03 と比較)
+=== done 02:23:41 ===

@@ -1,0 +1,18 @@
+[v93 pf_banks] 錨=grfree_anchor_train.pkl 773井 / banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'] / smooth_lag=192
+[bench] bank=pf_1 井=773 n_seed=32 robust_nu=None temper_beta=None (plain chunk60 / full VRAM8.0GB / fix192=parquet)
+  plain(lag0) : RMSE=9.6393  時間=188s
+  full        : RMSE=9.3936  時間=617s
+
+=== smooth=192(既存parquet, tw各バンク delta overall RMSE) ===
+  pf_ancc_delta_6: 7.6435
+  pf_ancc_delta_4: 8.4981
+  pf_ancc_delta_3: 9.0310
+  pf_ancc_delta: 9.2367
+  pf_ancc_delta_1: 9.2367
+  pf_ancc_delta_5: 9.8560
+  pf_ancc_delta_2: 10.4726
+
+=== まとめ(全井, bank=pf_1, n_seed=32) ===
+  精度: 素PF(lag0) 9.6393 / full 9.3936(素比-0.246) / smooth192(parquet最良) 7.6435(full比+1.750)
+  速度: 素PF(lag0) 188s / full 617s(素比×3.3)
+  ※smooth=192速度=create実測 ~1020s/回(773井,lag192,chunk20) → full(617s)は fix192比 約1.7倍速

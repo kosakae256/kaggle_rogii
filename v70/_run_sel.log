@@ -1,0 +1,56 @@
+[v70] 複数PF付き 773/773  (9バンク median基準, PF入力=on)
+[v70 iTr] wells 773 CV=field STRUCT=1 V=45 K=9 mode=sel(バンク選択) δ=91bin d=64 device=cuda
+[cv] leave-field-out 16fields→5fold
+  fold 0: train 623 / val 150
+    ep1/15 mse=55.780(rmse~7.469) 10s
+    ep2/15 mse=51.836(rmse~7.200) 9s
+    ep3/15 mse=46.702(rmse~6.834) 9s
+    ep4/15 mse=46.430(rmse~6.814) 9s
+    ep5/15 mse=43.079(rmse~6.563) 9s
+    ep6/15 mse=42.638(rmse~6.530) 10s
+    ep7/15 mse=42.243(rmse~6.499) 10s
+    ep8/15 mse=45.189(rmse~6.722) 10s
+    ep9/15 mse=44.324(rmse~6.658) 9s
+    ep10/15 mse=42.328(rmse~6.506) 9s
+    ep11/15 mse=40.768(rmse~6.385) 9s
+    ep12/15 mse=41.443(rmse~6.438) 10s
+    ep13/15 mse=41.161(rmse~6.416) 10s
+    ep14/15 mse=40.666(rmse~6.377) 9s
+    ep15/15 mse=39.086(rmse~6.252) 9s
+  fold 1: train 618 / val 155
+    ep1/15 mse=53.225(rmse~7.296) 11s
+    ep2/15 mse=51.433(rmse~7.172) 13s
+    ep3/15 mse=51.461(rmse~7.174) 13s
+    ep4/15 mse=49.487(rmse~7.035) 13s
+    ep5/15 mse=49.787(rmse~7.056) 13s
+    ep6/15 mse=50.512(rmse~7.107) 13s
+    ep7/15 mse=50.383(rmse~7.098) 13s
+    ep8/15 mse=49.993(rmse~7.071) 13s
+    ep9/15 mse=49.176(rmse~7.013) 13s
+    ep10/15 mse=48.560(rmse~6.969) 13s
+    ep11/15 mse=49.356(rmse~7.025) 13s
+    ep12/15 mse=50.003(rmse~7.071) 13s
+    ep13/15 mse=50.344(rmse~7.095) 13s
+    ep14/15 mse=48.024(rmse~6.930) 13s
+    ep15/15 mse=49.261(rmse~7.019) 13s
+  fold 2: train 620 / val 153
+    ep1/15 mse=57.707(rmse~7.597) 14s
+    ep2/15 mse=58.013(rmse~7.617) 14s
+    ep3/15 mse=56.977(rmse~7.548) 14s
+    ep4/15 mse=56.880(rmse~7.542) 14s
+    ep5/15 mse=56.608(rmse~7.524) 14s
+    ep6/15 mse=55.533(rmse~7.452) 17s
+    ep7/15 mse=55.915(rmse~7.478) 17s
+    ep8/15 mse=56.330(rmse~7.505) 17s
+    ep9/15 mse=55.530(rmse~7.452) 17s
+    ep10/15 mse=55.128(rmse~7.425) 18s
+    ep11/15 mse=55.547(rmse~7.453) 18s
+    ep12/15 mse=55.311(rmse~7.437) 17s
+    ep13/15 mse=56.929(rmse~7.545) 18s
+    ep14/15 mse=56.970(rmse~7.548) 18s
+    ep15/15 mse=58.107(rmse~7.623) 18s
+  fold 3: train 615 / val 158
+    ep1/15 mse=62.245(rmse~7.890) 17s
+    ep2/15 mse=62.855(rmse~7.928) 17s
+    ep3/15 mse=63.516(rmse~7.970) 17s
+    ep4/15 mse=62.436(rmse~7.902) 18s

@@ -1,0 +1,53 @@
+=== wait tabular (gbm_v41_oof.npy) 08:32:18 ===
+=== TCN baseline combo_s0 (1seed) 11:42:51 ===
+[v90 exp] RUN=combo_s0 SEEDS=[0] TOP_K=192 DROP=0.1 CH_DROP=0.1 XEXCL=''
+importance from 15 lightgbm fold models
+[combo_s0] mdn2_s0 fold0 [fit best=6.3630] rmse=6.3630
+[combo_s0] mdn2_s0 fold1 [fit best=7.0263] rmse=7.0263
+[combo_s0] mdn2_s0 fold2 [fit best=6.0436] rmse=6.0436
+[combo_s0] mdn2_s0 fold3 [fit best=6.1250] rmse=6.1250
+[combo_s0] mdn2_s0 fold4 [fit best=6.9740] rmse=6.9740
+== [combo_s0] mdn2_s0 OOF raw rmse=6.5196 (715s)
+[combo_s0] blend : w=0.56 pp=6.3882 >10=65  (v47 GBM単体 6.5736)
+参考 v29b(v28特徴): combo 単体pp=6.9403 blend=6.8711(w.62) / full blend=6.8768
+RUN          nn_raw    nn_pp  >10     w  blend_pp  >10  cfg
+Traceback (most recent call last):
+KeyError: 'combo'
+=== TCN noemis (emission+SDF除外) 11:56:10 ===
+[v90 exp] RUN=noemis SEEDS=[0] TOP_K=192 DROP=0.1 CH_DROP=0.1 XEXCL='pf_.*_(corr|diff|absdiff)|^sdf_'
+[v90 exp] XEXCL除外: rank 715->658
+[noemis] mdn2_s0 fold0 [fit best=6.4857] rmse=6.4857
+[noemis] mdn2_s0 fold1 [fit best=6.7466] rmse=6.7466
+[noemis] mdn2_s0 fold2 [fit best=6.1223] rmse=6.1223
+[noemis] mdn2_s0 fold3 [fit best=6.6279] rmse=6.6279
+[noemis] mdn2_s0 fold4 [fit best=7.3915] rmse=7.3915
+== [noemis] mdn2_s0 OOF raw rmse=6.6876 (710s)
+[noemis] blend : w=0.44 pp=6.4531 >10=64  (v47 GBM単体 6.5736)
+参考 v29b(v28特徴): combo 単体pp=6.9403 blend=6.8711(w.62) / full blend=6.8768
+RUN          nn_raw    nn_pp  >10     w  blend_pp  >10  cfg
+KeyError: 'combo'
+=== TCN hidrop (DROP0.2) 12:09:16 ===
+[v90 exp] RUN=hidrop SEEDS=[0] TOP_K=192 DROP=0.2 CH_DROP=0.2 XEXCL=''
+[hidrop] mdn2_s0 fold0 [fit best=6.5562] rmse=6.5562
+[hidrop] mdn2_s0 fold1 [fit best=6.9963] rmse=6.9963
+[hidrop] mdn2_s0 fold2 [fit best=6.0017] rmse=6.0017
+[hidrop] mdn2_s0 fold3 [fit best=6.1521] rmse=6.1521
+[hidrop] mdn2_s0 fold4 [fit best=6.9767] rmse=6.9767
+== [hidrop] mdn2_s0 OOF raw rmse=6.5494 (705s)
+[hidrop] blend : w=0.54 pp=6.4088 >10=62  (v47 GBM単体 6.5736)
+参考 v29b(v28特徴): combo 単体pp=6.9403 blend=6.8711(w.62) / full blend=6.8768
+RUN          nn_raw    nn_pp  >10     w  blend_pp  >10  cfg
+KeyError: 'combo'
+=== TCN topk128 12:22:16 ===
+[v90 exp] RUN=topk128 SEEDS=[0] TOP_K=128 DROP=0.1 CH_DROP=0.1 XEXCL=''
+[topk128] mdn2_s0 fold0 [fit best=6.5778] rmse=6.5778
+[topk128] mdn2_s0 fold1 [fit best=6.8604] rmse=6.8604
+[topk128] mdn2_s0 fold2 [fit best=6.1305] rmse=6.1305
+[topk128] mdn2_s0 fold3 [fit best=6.1011] rmse=6.1011
+[topk128] mdn2_s0 fold4 [fit best=7.0659] rmse=7.0659
+== [topk128] mdn2_s0 OOF raw rmse=6.5584 (644s)
+[topk128] blend : w=0.54 pp=6.4249 >10=62  (v47 GBM単体 6.5736)
+参考 v29b(v28特徴): combo 単体pp=6.9403 blend=6.8711(w.62) / full blend=6.8768
+RUN          nn_raw    nn_pp  >10     w  blend_pp  >10  cfg
+KeyError: 'combo'
+=== TCN experiments done 12:34:01 ===

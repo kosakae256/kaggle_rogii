@@ -1,0 +1,13 @@
+=== topk256(1seed, 特徴増で更に効くか) 17:36:03 ===
+[v90 exp] RUN=topk256 SEEDS=[0] TOP_K=256 DROP=0.1 CH_DROP=0.1 XEXCL=''
+== [topk256] mdn2_s0 OOF raw rmse=6.5960 (757s)
+[topk256] blend : w=0.52 pp=6.4173 >10=64  (v47 GBM単体 6.5736)
+KeyError: 'combo'
+=== combo3(baseline 3seed=本命) 17:50:17 ===
+[v90 exp] RUN=combo3 SEEDS=[0, 1, 2] TOP_K=192 DROP=0.1 CH_DROP=0.1 XEXCL=''
+== [combo3] mdn2_s0 OOF raw rmse=6.5412 (704s)
+== [combo3] mdn2_s1 OOF raw rmse=6.5931 (702s)
+== [combo3] mdn2_s2 OOF raw rmse=6.5069 (700s)
+[combo3] blend : w=0.62 pp=6.3790 >10=62  (v47 GBM単体 6.5736)
+KeyError: 'combo'
+=== TCN improve done 18:26:39 ===

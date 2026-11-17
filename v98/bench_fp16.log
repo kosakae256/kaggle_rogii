@@ -1,0 +1,7 @@
+[v93 pf_banks] 錨=grfree_anchor_train.pkl 773井 / banks=['pf_1', 'pf_2', 'pf_3', 'r0_seed32', 'r1_seed32', 'pfA'] / smooth_lag=192
+  pf_3       : plain(lag0)=9.1445/210s  full=8.8833/417s  smooth192(parq)=9.0310
+
+=== 全井ベンチ まとめ(n_seed=32) ===
+bank            素PF    full   sm192 |  full-素 full-192 | plain s  full s
+pf_3          9.144   8.883   9.031 |  -0.261   -0.148 |     210     417
+※ smooth=192速度=create実測 ~1020s/回。full は概ね ~600s = fix192比 約1.7倍速。

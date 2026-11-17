@@ -1,0 +1,31 @@
+表現別 delta列数: {'tw': 7, 'self': 6, 'nbr': 6, 'nbr_gr5': 6, 'self_graft': 6}
+読込: 行=3783989 井=773
+有効井=773
+
+=== 表現別: 事前区間grcorr vs eval RMSE の井戸横断相関 ===
+rep         n_well  grcorr平均  Pearson  Spearman  解釈
+tw             773     0.829   -0.047    -0.010  予測力なし
+self           773     0.978   -0.034    -0.004  予測力なし
+nbr            773     0.824   -0.169    -0.087  弱い
+nbr_gr5        773     0.857   -0.191    -0.120  弱い
+self_graft     773     0.982   -0.035    -0.032  予測力なし
+
+=== tw: 事前grcorr 五分位 → eval RMSE 平均(単調に下がれば選択に有効) ===
+  Q1 grcorr[0.23,0.78] : 平均RMSE=6.007 (n=155)
+  Q2 grcorr[0.78,0.83] : 平均RMSE=6.021 (n=154)
+  Q3 grcorr[0.83,0.86] : 平均RMSE=6.182 (n=155)
+  Q4 grcorr[0.86,0.90] : 平均RMSE=5.071 (n=154)
+  Q5 grcorr[0.90,0.98] : 平均RMSE=5.813 (n=155)
+
+=== 選択検証: 事前grcorr最大の表現を採用 vs 各固定 ===
+  対象井=773
+    固定tw         : 平均RMSE=5.819
+    固定self       : 平均RMSE=5.610
+    固定nbr        : 平均RMSE=5.889
+    固定nbr_gr5    : 平均RMSE=6.004
+    固定self_graft : 平均RMSE=6.206
+  ★grcorr最大選択      : 平均RMSE=6.199
+  oracle(誤差最小選択)  : 平均RMSE=4.060
+  => grcorr選択 無効(最良固定に劣る)  (最良固定=self 5.610)
+
+saved v98/prefix_grcorr_analysis.png
